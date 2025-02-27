@@ -37,3 +37,13 @@ body {
   color: #555;
   /* background-color: red; */
 }
+
+@layer components {
+  .link-hover {
+    @apply relative inline-block pl-6 text-gray-300 transition-all duration-300 ease-in-out
+           hover:text-blue-400 hover:pl-7
+           before:content-['→'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+           before:text-gray-300 before:transition-all before:duration-300 before:ease-in-out
+           hover:before:text-blue-400 hover:before:translate-x-1;
+  }
+}

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import StarIcon from '../Icons/StarIcon';
+import CountUp from 'react-countup';
 
 export default function WhyChooseUs() {
   const features = [
@@ -18,9 +19,9 @@ export default function WhyChooseUs() {
   ];
 
   const statistics = [
-    { id: 1, count: '2k+', label: 'Happy Clients' },
-    { id: 2, count: '2.3k+', label: 'Total Students' },
-    { id: 3, count: '100+', label: 'Win Best Awards' },
+    { id: 1, count: 2000, label: 'Happy Clients' },
+    { id: 2, count: 2300, label: 'Total Students' },
+    { id: 3, count: 100, label: 'Win Best Awards' },
   ];
   return (
     <Box className="w-full bg-white py-12 text-[black]">
@@ -126,7 +127,14 @@ export default function WhyChooseUs() {
                       variant="h3"
                       className="text-4xl font-bold text-navy-900"
                     >
-                      {stat.count}
+                      <CountUp
+                        start={0}
+                        end={stat.count}
+                        suffix="+"
+                        duration={2}
+                        enableScrollSpy
+                      />
+                      {}
                     </Typography>
                     <Typography variant="body2" className="text-gray-500">
                       {stat.label}

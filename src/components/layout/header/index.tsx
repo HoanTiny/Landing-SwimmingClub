@@ -1,5 +1,6 @@
 // components/Header.js
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,8 +15,40 @@ export default function Header() {
   // Các item trên menu
   const navItems = ['Trang chủ', 'Dịch vụ', 'Lớp học', 'Dịch vụ', 'Đăng ký'];
 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  // Xử lý hiệu ứng scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setVisible(
+        prevScrollPos > currentScrollPos ||
+          currentScrollPos <= 100 ||
+          currentScrollPos >= 400,
+      );
+
+      // console.log('object scroll', currentScrollPos, visible, prevScrollPos);
+      setPrevScrollPos(() => currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#4f1fff' }}>
+    <AppBar
+      position="fixed"
+      className={`transition-transform duration-500 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+      elevation={0}
+      sx={{ backgroundColor: '#4f1fff' }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Logo / Thương hiệu */}
@@ -30,9 +63,9 @@ export default function Header() {
 
           {/* Menu item (Hiển thị trên màn hình md trở lên) */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <Button
-                key={item}
+                key={index}
                 sx={{
                   color: '#fff',
                   textTransform: 'none',

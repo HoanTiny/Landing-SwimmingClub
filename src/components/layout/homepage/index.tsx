@@ -1,5 +1,7 @@
 import About from '@/components/about';
 import Banner from '@/components/banner';
+import ClassesCarousel from '@/components/ourClasses';
+import WhyChooseUs from '@/components/whyChooseUs';
 import { Box } from '@mui/material';
 
 function HomePage() {
@@ -10,6 +12,8 @@ function HomePage() {
       <Box>
         {/* Container  */}
         <About />
+        <ClassesCarousel />
+        <WhyChooseUs />
       </Box>
     </Box>
   );

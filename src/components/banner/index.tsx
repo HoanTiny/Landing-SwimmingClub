@@ -2,7 +2,6 @@
 'use client';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import 'swiper/css';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 

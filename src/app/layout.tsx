@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import Header from '@/components/layout/header';
+import MUIThemeProvider from 'src/contexts/MUIThemeProvider';
 
 export default async function RootLayout({
   children,
@@ -20,15 +21,17 @@ export default async function RootLayout({
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <div className="wrapper">
-            <Suspense>
-              <Header />
-            </Suspense>
-            <div className="min-h-[100vh]">
-              {children}
-              {/* <Footer /> */}
+          <MUIThemeProvider>
+            <div className="wrapper">
+              <Suspense>
+                <Header />
+              </Suspense>
+              <div className="min-h-[100vh]">
+                {children}
+                {/* <Footer /> */}
+              </div>
             </div>
-          </div>
+          </MUIThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -10,7 +10,8 @@
       "@/styles/*": ["./src/styles/*"],
       "@/mocks/*": ["./__mocks__/*"],
       "@/tests/*": ["./.jest/*"],
-      "@/assets/*": [".src/assets/*"]
+      "@/assets/*": [".src/assets/*"],
+      "@/configs/*": [".src/configs/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

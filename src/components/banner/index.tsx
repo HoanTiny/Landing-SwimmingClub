@@ -21,8 +21,8 @@ const Banner = () => {
         sx={{
           position: 'relative',
           width: '100%',
-          height: '90vh',
         }}
+        className="lg:h-[90vh] h-[50vh]"
       >
         {/* Overlay cho tối ảnh (nếu muốn) */}
         <Box
@@ -78,12 +78,6 @@ const Banner = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-
-        <Box className="absolute inset-0 flex items-center justify-center z-10 text-[#ccc]">
-          <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
-            {/* Text */}
-          </h1>
-        </Box>
       </Box>
     </>
   );

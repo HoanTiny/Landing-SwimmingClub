@@ -22,7 +22,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <MUIThemeProvider>
-            <div className="wrapper">
+            <div className="wrapper overflow-hidden">
               <Suspense>
                 <Header />
               </Suspense>

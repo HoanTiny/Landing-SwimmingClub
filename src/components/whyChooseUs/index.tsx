@@ -7,6 +7,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import StarIcon from '../Icons/StarIcon';
 import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 
 export default function WhyChooseUs() {
   const features = [
@@ -23,12 +24,13 @@ export default function WhyChooseUs() {
     { id: 2, count: 2300, label: 'Total Students' },
     { id: 3, count: 100, label: 'Win Best Awards' },
   ];
+
   return (
-    <Box className="w-full bg-white py-12 text-[black]">
+    <Box className="w-full bg-white py-12 text-[black]" id="services">
       <Container maxWidth="xl" className="w-full ">
         <Grid container spacing={4} className="items-center">
           {/* Left side with images */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <Stack
               direction={'row'}
               alignItems={'center'}
@@ -54,7 +56,7 @@ export default function WhyChooseUs() {
                     alt="Child at swimming lesson"
                     width={400}
                     height={300}
-                    className="h-[350px] w-[250px] rounded-[12px] object-cover"
+                    className="lg:h-[350px] md:h-[250px] h-[250px] w-[250px] rounded-[12px] object-cover"
                   />
                 </Box>
               </Stack>
@@ -73,7 +75,7 @@ export default function WhyChooseUs() {
                     alt="Child at swimming lesson"
                     width={400}
                     height={300}
-                    className="h-[350px] w-[250px] rounded-[12px] object-cover"
+                    className="lg:h-[350px] md:h-[250px] h-[250px] w-[250px] rounded-[12px] object-cover"
                   />
                 </Box>
               </Stack>
@@ -81,7 +83,7 @@ export default function WhyChooseUs() {
           </Grid>
 
           {/* Right side with content */}
-          <Grid item xs={12} md={7} className="pl-4 md:pl-8">
+          <Grid item xs={12} md={6} className="pl-4 md:pl-8">
             <Box className="mb-8">
               <Typography
                 variant="subtitle1"
@@ -127,14 +129,15 @@ export default function WhyChooseUs() {
                       variant="h3"
                       className="text-4xl font-bold text-navy-900"
                     >
-                      <CountUp
-                        start={0}
-                        end={stat.count}
-                        suffix="+"
-                        duration={2}
-                        enableScrollSpy
-                      />
-                      {}
+                      {stat.count !== undefined && (
+                        <CountUp
+                          start={0}
+                          end={stat.count}
+                          prefix="+"
+                          duration={2}
+                          enableScrollSpy
+                        />
+                      )}
                     </Typography>
                     <Typography variant="body2" className="text-gray-500">
                       {stat.label}

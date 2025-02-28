@@ -9,7 +9,7 @@ import Footer from '../footer';
 
 function HomePage() {
   return (
-    <Box>
+    <Box id="home">
       <Banner />
 
       <Box>

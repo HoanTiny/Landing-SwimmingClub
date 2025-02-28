@@ -94,7 +94,7 @@ const ProfessionalTrainers = () => {
             <div
               className={`absolute top-1/2 left-0 -translate-y-1/2 z-10 transition-transform duration-300 ${
                 visibleNavigation
-                  ? 'translate-x-[-100%] opacity-1'
+                  ? 'lg:translate-x-[-100%] opacity-1 translate-x-0'
                   : '-translate-x-[300%] opacity-0'
               }`}
             >
@@ -110,7 +110,7 @@ const ProfessionalTrainers = () => {
             <div
               className={`absolute top-1/2 right-0 -translate-y-1/2 z-10 transition-transform duration-300 ${
                 visibleNavigation
-                  ? 'translate-x-[100%] opacity-1'
+                  ? 'lg:translate-x-[100%] opacity-1 translate-x-0'
                   : 'translate-x-[300%] opacity-0'
               }`}
             >

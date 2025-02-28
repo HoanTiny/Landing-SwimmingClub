@@ -12,7 +12,7 @@ import about2 from '../../assets/img/Rectangle28.jpg';
 import about3 from '../../assets/img/Rectangle27.jpg';
 function About() {
   return (
-    <Box className="py-12 md:py6 bg-white text-black">
+    <Box className="py-12 md:py6 bg-white text-black" id="about">
       <Container maxWidth="xl">
         <Grid container spacing={4} alignItems="center">
           <Grid size={{ xs: 12, md: 6 }}>

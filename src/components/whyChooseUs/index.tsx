@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                 {/* Top left image */}
                 <Box className="mb-4">
                   <Image
-                    src="/images/choose2.webp"
+                    src="/images/hcb.jpg"
                     alt="Children swimming with kickboards"
                     width={300}
                     height={300}
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                 {/* Bottom left image */}
                 <Box>
                   <Image
-                    src="/images/choose1.webp"
+                    src="/images/sx.jpg"
                     alt="Child at swimming lesson"
                     width={400}
                     height={300}
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
 
                 <Box>
                   <Image
-                    src="/images/choose1.webp"
+                    src="/images/hcv.jpg"
                     alt="Child at swimming lesson"
                     width={400}
                     height={300}

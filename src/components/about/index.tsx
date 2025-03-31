@@ -6,10 +6,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import Grid from '@mui/material/Grid2';
 
-// Thay bằng ảnh của bạn
-import about1 from '../../assets/img/Rectangle27.jpg';
-import about2 from '../../assets/img/Rectangle28.jpg';
-import about3 from '../../assets/img/Rectangle27.jpg';
 function About() {
   return (
     <Box className="py-12 md:py6 bg-white text-black" id="about">
@@ -22,7 +18,7 @@ function About() {
                 {/* Left side image - swimming pool */}
                 <Box className="absolute left-0 top-8 w-2/3 h-4/5 overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src={about1}
+                    src="/images/tranning4.jpg"
                     alt="Swimming pool"
                     layout="fill"
                     style={{ objectFit: 'cover' }}
@@ -33,7 +29,7 @@ function About() {
                 {/* Top right image - child in pool */}
                 <Box className="absolute right-0 top-0 w-1/2 h-2/5 overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src={about2}
+                    src="/images/trainning2.jpg"
                     alt="Child swimming"
                     layout="fill"
                     style={{ objectFit: 'cover' }}
@@ -43,7 +39,7 @@ function About() {
                 {/* Bottom right image - kids having fun */}
                 <Box className="absolute right-0 bottom-0 w-1/2 h-2/5 overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src={about3}
+                    src="/images/trainning3.webp"
                     alt="Kids having fun in pool"
                     layout="fill"
                     style={{ objectFit: 'cover' }}

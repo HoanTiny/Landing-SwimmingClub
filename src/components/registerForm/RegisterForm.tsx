@@ -249,26 +249,22 @@ const RegisterForm: React.FC = () => {
     {
       id: 'cs1',
       label: 'Cơ sở 1',
-      address:
-        'Trung tâm văn hóa thể thao và thông tin quận Hoàng Mai, Số 5 Linh Đường, Hoàng Mai, Hà Nội.',
+      address: '234 Hoàng Quốc Việt, Cầu Giấy, Hà Nội',
     },
     {
       id: 'cs2',
       label: 'Cơ sở 2',
-      address:
-        'Tầng 3, Trung tâm Phụ Nữ và Phát Triển, Số 20 Thụy Khuê, Tây Hồ, Hà Nội.',
+      address: '109 Nguyễn Tuân, Thanh Xuân, Hà Nội',
     },
     {
       id: 'cs3',
       label: 'Cơ sở 3',
-      address:
-        'Tầng 4, Tòa Golden Field, Số 24 Nguyễn Cơ Thạch, Nam Từ Liêm, Hà Nội.',
+      address: '83 Vũ Trọng Phụng, Thanh Xuân, Hà Nội',
     },
     {
       id: 'cs4',
       label: 'Cơ sở 4',
-      address:
-        'Cung thể thao dưới nước Mỹ Đình, Đ. Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.',
+      address: '33 Mạc Thái Tổ, Yên Hòa, Cầu Giấy, Hà Nội',
     },
   ];
 
@@ -437,35 +433,15 @@ const RegisterForm: React.FC = () => {
               href="#"
               className="flex items-center gap-2 text-blue-800 hover:text-blue-600"
             >
-              📞 Hotline: 0798 234 555
+              📞 Hotline: 0968156663
             </Typography>
             <Typography
               component="a"
-              href="#"
+              href="https://www.facebook.com/profile.php?id=100043515746559"
+              target="_blank"
               className="text-blue-800 hover:text-blue-600"
             >
               🔵 Facebook
-            </Typography>
-            <Typography
-              component="a"
-              href="#"
-              className="text-pink-600 hover:text-pink-400"
-            >
-              📷 Instagram
-            </Typography>
-            <Typography
-              component="a"
-              href="#"
-              className="text-red-600 hover:text-red-400"
-            >
-              ▶️ Youtube
-            </Typography>
-            <Typography
-              component="a"
-              href="#"
-              className="text-black hover:text-gray-600"
-            >
-              🎵 Tiktok
             </Typography>
           </Box>
         </CardContent>

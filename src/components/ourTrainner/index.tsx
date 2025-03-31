@@ -26,34 +26,50 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 // Dữ liệu demo về các trainer
 const trainersData = [
   {
-    name: 'Emanuel Madlin',
+    name: 'Ngô Thế Quyền',
     title: 'Swimming Trainer',
-    image: '/images/trainer1.jpg',
+    image: '/images/trainners/hlv3.jpg',
   },
   {
-    name: 'Jonson Anderson',
+    name: 'Tâm Nguyễn',
     title: 'Swimming Trainer',
-    image: '/images/trainer2.webp',
+    image: '/images/trainners/hlv1.jpg',
   },
   {
-    name: 'Emma Mary',
+    name: 'Huyền Trang',
     title: 'Swimming Trainer',
-    image: '/images/trainer3.jpg',
+    image: '/images/trainners/hlv2.jpg',
+  },
+
+  {
+    name: 'Nam Thành',
+    title: 'Swimming Trainer',
+    image: '/images/trainners/hlv4.jpg',
   },
   {
-    name: 'Daniel Thomas',
+    name: 'Phùng Khăc Huy',
     title: 'Swimming Trainer',
-    image: '/images/trainer4.jpg',
+    image: '/images/trainners/hlv5.jpg',
   },
   {
-    name: 'Jonson Anderson',
+    name: 'Hà Minh Toàn',
     title: 'Swimming Trainer',
-    image: '/images/trainer2.webp',
+    image: '/images/trainners/hlv6.jpg',
   },
   {
-    name: 'Emma Mary',
+    name: 'Đăng Thu Hiền',
     title: 'Swimming Trainer',
-    image: '/images/trainer3.jpg',
+    image: '/images/trainners/hlv7.jpg',
+  },
+  {
+    name: 'Nguyễn Thành',
+    title: 'Swimming Trainer',
+    image: '/images/trainners/hlv8.jpg',
+  },
+  {
+    name: 'Hà Minh Hữu',
+    title: 'Swimming Trainer',
+    image: '/images/trainners/hlv9.jpg',
   },
 ];
 

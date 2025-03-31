@@ -1,5 +1,5 @@
 // components/Header.js
-'use client';
+'use client'; // Only add if you're using Next.js 13 (app router)
 import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,17 +8,22 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import { Container } from '@mui/material';
+import Link from 'next/link';
 
 export default function Header() {
-  // Các item trên menu
-  const navItems = ['Trang chủ', 'Dịch vụ', 'Lớp học', 'Dịch vụ', 'Đăng ký'];
+  const navItems = [
+    { label: 'Trang chủ', href: '#home' },
+    { label: 'Dịch vụ', href: '#services' },
+    { label: 'Lớp học', href: '#classes' },
+    { label: 'Đăng ký', href: '#register' },
+    { label: 'Đội ngũ', href: '#trainers' },
+    { label: 'Về chúng tôi', href: '#about' },
+  ];
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  // Xử lý hiệu ứng scroll
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -28,17 +33,25 @@ export default function Header() {
           currentScrollPos <= 100 ||
           currentScrollPos >= 400,
       );
-
-      // console.log('object scroll', currentScrollPos, visible, prevScrollPos);
-      setPrevScrollPos(() => currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
+
+  // Hàm xử lý cuộn mượt khi click menu
+
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ): void => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <AppBar
@@ -51,42 +64,26 @@ export default function Header() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* Logo / Thương hiệu */}
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 4, fontWeight: 'bold', color: '#fff' }}
           >
-            PePex
+            CLB THỦ ĐÔ
           </Typography>
-
-          {/* Menu item (Hiển thị trên màn hình md trở lên) */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navItems.map((item, index) => (
-              <Button
+              <Link
                 key={index}
-                sx={{
-                  color: '#fff',
-                  textTransform: 'none',
-                  fontWeight: 500,
-                  mr: 2,
-                  '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' },
-                }}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
+                className="text-white font-medium mr-2 hover:bg-white/10 px-2 py-1 rounded"
               >
-                {item}
-              </Button>
+                {item.label}
+              </Link>
             ))}
           </Box>
-
-          {/* Nút Search */}
-          <IconButton
-            sx={{ color: '#fff', display: { xs: 'none', md: 'inline-flex' } }}
-          >
-            <SearchIcon />
-          </IconButton>
-
-          {/* Nút Request Quote */}
           <Button
             variant="contained"
             sx={{
@@ -102,8 +99,6 @@ export default function Header() {
           >
             Liên hệ
           </Button>
-
-          {/* Menu icon (dành cho mobile) */}
           <IconButton
             sx={{
               ml: 2,

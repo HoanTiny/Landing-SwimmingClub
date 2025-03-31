@@ -10,21 +10,21 @@ import CountUp from 'react-countup';
 
 export default function WhyChooseUs() {
   const features = [
-    { id: 1, text: 'Modern methods' },
-    { id: 2, text: '15 years on the market' },
-    { id: 3, text: 'Payment in installments' },
-    { id: 4, text: 'Personal development' },
-    { id: 5, text: 'Modern equipment' },
-    { id: 6, text: 'Introductory lesson' },
+    { id: 1, text: 'Phương pháp hiện đại' },
+    { id: 2, text: '15 năm trên thị trường' },
+    { id: 3, text: 'Thanh toán trả góp' },
+    { id: 4, text: 'Phát triển cá nhân' },
+    { id: 5, text: 'Trang thiết bị hiện đại' },
+    { id: 6, text: 'Buổi học thử' },
   ];
 
   const statistics = [
-    { id: 1, count: 2000, label: 'Happy Clients' },
-    { id: 2, count: 2300, label: 'Total Students' },
-    { id: 3, count: 100, label: 'Win Best Awards' },
+    { id: 1, count: 2000, label: 'Khách Hàng Hài Lòng' },
+    { id: 2, count: 2300, label: 'Tổng Số Học Viên' },
+    { id: 3, count: 100, label: 'Giải Thưởng Xuất Sắc' },
   ];
   return (
-    <Box className="w-full bg-white py-12 text-[black]">
+    <Box className="w-full bg-white py-12 text-[black]" id="services">
       <Container maxWidth="xl" className="w-full ">
         <Grid container spacing={4} className="items-center">
           {/* Left side with images */}
@@ -88,23 +88,24 @@ export default function WhyChooseUs() {
                 className="text-blue-500 font-medium flex items-center mb-2"
               >
                 <span className="w-6 h-0.5 bg-blue-500 mr-2"></span>
-                Why Choose Us
+                Tại Sao Chọn Chúng Tôi
               </Typography>
 
               <Typography
                 variant="h2"
                 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4"
               >
-                Unparalleled Excellence
+                Nơi Hội Tụ
                 <br />
-                in Aquatic Education
+                Sự Xuất Sắc Trong Giáo Dục Bơi Lội
               </Typography>
 
               <Typography variant="body1" className="text-gray-600 mb-6">
-                Opening in spring and closing in fall are ideal. However, it
-                depends on local climate conditions; a professional service can
-                guide you based on your location regular chlorination, proper
-                water cleaning.
+                Chúng tôi tự hào mang đến một môi trường học bơi hiện đại và
+                chuyên nghiệp, nơi mọi chi tiết đều được chăm chút kỹ lưỡng. Từ
+                phương pháp giảng dạy tiên tiến đến hệ thống vệ sinh và xử lý
+                nước đạt chuẩn, chúng tôi cam kết mang lại trải nghiệm học tập
+                an toàn và hiệu quả nhất cho học viên.
               </Typography>
 
               {/* Features Grid */}

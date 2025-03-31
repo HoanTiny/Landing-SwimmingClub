@@ -62,7 +62,7 @@ const ProfessionalTrainers = () => {
   const [visibleNavigation, setVisibleNavigation] = useState(false);
 
   return (
-    <Box className="py-16 bg-white text-black">
+    <Box className="py-16 bg-white text-black" id="trainers">
       <Container
         maxWidth="xl"
         onMouseEnter={() => setVisibleNavigation(true)}
@@ -84,7 +84,7 @@ const ProfessionalTrainers = () => {
             component="h2"
             className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
           >
-            Join Our Swimming Trainner
+            Với những huấn luyện viên chuyên nghiệp
           </Typography>
         </Box>
 

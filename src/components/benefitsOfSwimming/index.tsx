@@ -30,20 +30,21 @@ export default function BenefitsOfSwimming() {
               variant="h6"
               className="text-blue-400 font-semibold mb-2"
             >
-              Benefits Of Swimming
+              Lợi Ích Của Việc Bơi Lội
             </Typography>
 
             <Typography variant="h4" className="font-bold mb-4 leading-tight">
-              Turning Fear into Fins
+              Từ Nỗi Sợ Hãi Đến Sự Tự Tin
               <br />
-              Learn to Swim with Us
+              Cùng Chúng Tôi Làm Chủ Kỹ Năng Bơi Lội
             </Typography>
 
             <Typography variant="body1" className="text-gray-300 mb-8">
-              Our curriculum is structured to progressively build swimming
-              skills, starting from basic water safety. We offer a variety of
-              classes tailored to different age groups and skill levels,
-              ensuring an enjoyable experience for everyone.
+              Chương trình học của chúng tôi được thiết kế để phát triển kỹ năng
+              bơi lội một cách tuần tự, bắt đầu từ an toàn dưới nước cơ bản.
+              Chúng tôi cung cấp nhiều lớp học phù hợp với các nhóm tuổi và
+              trình độ khác nhau, đảm bảo một trải nghiệm thú vị cho tất cả mọi
+              người.
             </Typography>
 
             {/* Bullet points */}
@@ -52,11 +53,11 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Swimming Equipment&apos;s
+                    Trang Thiết Bị Bơi Lội
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    Our classes ensure participants have access to proper
-                    equipment needed to succeed.
+                    Các lớp học của chúng tôi đảm bảo học viên có đầy đủ trang
+                    thiết bị cần thiết để thành công.
                   </Typography>
                 </div>
               </div>
@@ -65,11 +66,11 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Safe &amp; Fun Environments
+                    Môi Trường An Toàn &amp; Vui Vẻ
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    We provide a safe learning space for swimmers of all levels,
-                    ensuring an enjoyable experience.
+                    Chúng tôi cung cấp một không gian học tập an toàn cho mọi
+                    cấp độ bơi, đảm bảo một trải nghiệm thú vị.
                   </Typography>
                 </div>
               </div>
@@ -78,12 +79,12 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Water Slides and Flumes
+                    Cầu Trượt Nước và Đường Trượt
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    Water safety is a top priority in our classes. We teach
-                    essential water safety skills, such as floating and breath
-                    control, that can save lives.
+                    An toàn dưới nước là ưu tiên hàng đầu trong các lớp học của
+                    chúng tôi. Chúng tôi dạy các kỹ năng an toàn dưới nước quan
+                    trọng, như nổi và kiểm soát hơi thở, có thể cứu sống.
                   </Typography>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import ProfessionalTrainers from '@/components/ourTrainner';
 import WhyChooseUs from '@/components/whyChooseUs';
 import { Box } from '@mui/material';
 import Footer from '../footer';
+import RegisterForm from '@/components/registerForm/RegisterForm';
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
         <WhyChooseUs />
         <BenefitsOfSwimming />
         <ProfessionalTrainers />
+        <RegisterForm />
       </Box>
 
       <Footer />

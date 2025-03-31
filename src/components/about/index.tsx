@@ -85,7 +85,7 @@ function About() {
                 className="text-blue-500 font-medium flex items-center"
               >
                 <span className="w-6 h-0.5 bg-blue-500 inline-block mr-2"></span>
-                About Us Our Class
+                Thông tin về chúng tôi
               </Typography>
 
               {/* Heading */}
@@ -94,15 +94,15 @@ function About() {
                 component="h2"
                 className="text-4xl md:text-5xl font-bold text-navy-900"
               >
-                Splash into Success with Our Swimming Classes
+                Hòa mình vào bơi lặn với các lớp học bơi của chúng tôi
               </Typography>
 
               {/* Description */}
               <Typography variant="body1" className="text-gray-600">
-                Opening in spring and closing in fall are ideal. However, it
-                depends on local climate conditions; a professional service can
-                guide you based on your location regular chlorination, proper
-                water cleaning.
+                Hoạt động tại chuỗi bể bơi hàng đầu Hà Nội, đảm bảo an toàn sức
+                khỏe của học viên với: Hệ thống bể bơi bốn mùa. Chất lượng đạt
+                chuẩn Bộ Y Tế. Nhiệt độ từ 30-31 độ C vào mùa đông và mát vào
+                mùa hè. Các tiện ích chuyên nghiệp.
               </Typography>
 
               {/* Features list */}
@@ -111,7 +111,7 @@ function About() {
                   <Box className="flex items-start space-x-2">
                     <CheckCircleIcon className="text-blue-500 mt-0.5" />
                     <Typography variant="body1" className="font-medium">
-                      Experience Trainer
+                      Huấn luyện viên chuyên nghiệp
                     </Typography>
                   </Box>
                 </Grid>
@@ -120,7 +120,7 @@ function About() {
                   <Box className="flex items-start space-x-2">
                     <CheckCircleIcon className="text-blue-500 mt-0.5" />
                     <Typography variant="body1" className="font-medium">
-                      Recommends Our School
+                      Đội ngũ nhân viên tận tâm
                     </Typography>
                   </Box>
                 </Grid>
@@ -129,7 +129,7 @@ function About() {
                   <Box className="flex items-start space-x-2">
                     <CheckCircleIcon className="text-blue-500 mt-0.5" />
                     <Typography variant="body1" className="font-medium">
-                      Competitions Won
+                      Cơ sở vật chất hiện đại
                     </Typography>
                   </Box>
                 </Grid>
@@ -138,7 +138,7 @@ function About() {
                   <Box className="flex items-start space-x-2">
                     <CheckCircleIcon className="text-blue-500 mt-0.5" />
                     <Typography variant="body1" className="font-medium">
-                      Successful History
+                      Đảm bảo an toàn tuyệt đối
                     </Typography>
                   </Box>
                 </Grid>
@@ -150,7 +150,7 @@ function About() {
                 size="large"
                 className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 py-3 rounded-md shadow-md"
               >
-                MORE ABOUT US
+                Đăng ký ngay
               </Button>
             </Box>
           </Grid>

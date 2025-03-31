@@ -31,64 +31,64 @@ const ClassesCarousel = () => {
   const classes = [
     {
       id: 1,
-      title: 'Sea Turtles: 3-4 Years',
-      price: '$250.99',
+      title: 'Khóa cơ bản cho trẻ em: 2-3 tuổi',
+      price: '$150.99',
       image: about1,
       description:
-        'Water safety is a top priority in our classes. We teach essential water safety skills.',
+        'Khóa học bơi dành cho trẻ em từ 2-3 tuổi, giúp trẻ làm quen với nước và phát triển kỹ năng bơi lội.',
       lessons: 8,
       enrolled: '60+',
-      type: 'Children',
+      type: 'Trẻ em',
     },
     {
       id: 2,
-      title: 'Sea Turtles: 3-4 Years',
+      title: 'Khóa học bơi nâng cao cho trẻ em: 3-4 tuổi',
       price: '$200.99',
       image: about2,
       description:
-        'Sea turtles are fascinating reptiles that inhabit oceans around the from tropics',
+        'Khóa học bơi nâng cao dành cho trẻ em từ 3-4 tuổi, giúp trẻ phát triển kỹ năng bơi lội và tự tin trong nước.',
       lessons: 8,
       enrolled: '60+',
-      type: 'Children',
+      type: 'Trẻ em',
     },
     {
       id: 3,
-      title: 'Sharks: 4-12 Years',
+      title: 'Lớp học bơi cho trẻ em: 4-5 tuổi',
       price: '$220.99',
       image: about1,
       description:
-        "Sharks are a diverse group of cartilaginous fish that have inhabited the Earth's oceans",
+        'Khóa học bơi dành cho trẻ em từ 4-5 tuổi, giúp trẻ phát triển kỹ năng bơi lội và tự tin trong nước.',
       lessons: 8,
       enrolled: '60+',
-      type: 'Children',
+      type: 'Trẻ em',
     },
     {
       id: 4,
-      title: 'Dolphins: 5-7 Years',
+      title: 'Lớp học bơi cho trẻ em: 5-6 tuổi',
       price: '$230.99',
       image: about2,
       description:
-        'Our Dolphins class focuses on intermediate swimming skills and water confidence building.',
+        'Khóa học bơi dành cho trẻ em từ 5-6 tuổi, giúp trẻ phát triển kỹ năng bơi lội và tự tin trong nước.',
       lessons: 10,
       enrolled: '55+',
-      type: 'Children',
+      type: 'Trẻ em',
     },
     {
       id: 5,
-      title: 'Adult Beginners',
+      title: 'Khóa học bơi cho người lớn',
       price: '$270.99',
       image: about2,
 
       description:
-        "It's never too late to learn! Our adult classes provide a supportive environment for beginners.",
+        'Khóa học bơi dành cho người lớn, giúp người học tự tin và thành thạo kỹ năng bơi lội.',
       lessons: 12,
       enrolled: '40+',
-      type: 'Adults',
+      type: 'Người lớn',
     },
   ];
 
   return (
-    <Box className="py-16 bg-white text-black" id="ourclass">
+    <Box className="py-16 bg-white text-black" id="classes">
       <Container
         maxWidth="xl"
         onMouseEnter={() => setVisibleNavigation(true)}
@@ -110,7 +110,7 @@ const ClassesCarousel = () => {
             component="h2"
             className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
           >
-            Join Our Swimming Classes
+            Tham gia các lớp học bơi của chúng tôi
           </Typography>
         </Box>
 
@@ -171,7 +171,7 @@ const ClassesCarousel = () => {
               },
             }}
             scrollbar={{ draggable: true }}
-            className="mySwiper !p-2"
+            className="mySwiper !p-2 !flex"
             //
           >
             {classes.map((classItem) => (
@@ -182,9 +182,10 @@ const ClassesCarousel = () => {
                   borderRadius: '10px',
                   boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
                   borderColor: 'white',
+                  height: 'auto',
                 }}
               >
-                <Card className="h-full shadow-md ">
+                <Card className="h-full flex flex-col shadow-md">
                   <Box className="relative">
                     <CardMedia
                       component="img"
@@ -200,7 +201,7 @@ const ClassesCarousel = () => {
                     </Box>
                   </Box>
 
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 flex-grow">
                     <Typography variant="h5" className="font-bold text-xl mb-3">
                       {classItem.title}
                     </Typography>
@@ -211,30 +212,29 @@ const ClassesCarousel = () => {
                     >
                       {classItem.description}
                     </Typography>
-
-                    <Box className="pt-4 border-t border-gray-200 mt-4 flex items-center justify-between">
-                      <Box className="flex items-center text-blue-500">
-                        <BookIcon fontSize="small" className="mr-1" />
-                        <Typography variant="body2" className="font-medium">
-                          Lesson {classItem.lessons}
-                        </Typography>
-                      </Box>
-
-                      <Box className="flex items-center text-blue-500">
-                        <PersonIcon fontSize="small" className="mr-1" />
-                        <Typography variant="body2" className="font-medium">
-                          Enrolled {classItem.enrolled}
-                        </Typography>
-                      </Box>
-
-                      <Box className="flex items-center text-blue-500">
-                        <ChildCareIcon fontSize="small" className="mr-1" />
-                        <Typography variant="body2" className="font-medium">
-                          {classItem.type}
-                        </Typography>
-                      </Box>
-                    </Box>
                   </CardContent>
+                  <Box className="pt-4 border-t p-6 border-gray-200 mt-4 flex items-center justify-between">
+                    <Box className="flex items-center text-blue-500">
+                      <BookIcon fontSize="small" className="mr-1" />
+                      <Typography variant="body2" className="font-medium">
+                        Bài học: {classItem.lessons}
+                      </Typography>
+                    </Box>
+
+                    <Box className="flex items-center text-blue-500">
+                      <PersonIcon fontSize="small" className="mr-1" />
+                      <Typography variant="body2" className="font-medium">
+                        Đã đăng ký {classItem.enrolled}
+                      </Typography>
+                    </Box>
+
+                    <Box className="flex items-center text-blue-500">
+                      <ChildCareIcon fontSize="small" className="mr-1" />
+                      <Typography variant="body2" className="font-medium">
+                        {classItem.type}
+                      </Typography>
+                    </Box>
+                  </Box>
                 </Card>
               </SwiperSlide>
             ))}

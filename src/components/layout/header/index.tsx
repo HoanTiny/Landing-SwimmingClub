@@ -153,6 +153,12 @@ export default function Header() {
                   backgroundColor: '#187bcd',
                 },
               }}
+              onClick={() =>
+                window.open(
+                  'https://www.facebook.com/profile.php?id=100043515746559',
+                  '_blank',
+                )
+              }
             >
               Liên hệ
             </Button>

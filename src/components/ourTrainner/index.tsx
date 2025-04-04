@@ -23,6 +23,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Section from '../section';
 // Dữ liệu demo về các trainer
 const trainersData = [
   {
@@ -95,13 +96,15 @@ const ProfessionalTrainers = () => {
             <span className="w-6 h-0.5 bg-blue-500 inline-block ml-2"></span>
           </Typography>
 
-          <Typography
-            variant="h2"
-            component="h2"
-            className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
-          >
-            Với những huấn luyện viên chuyên nghiệp
-          </Typography>
+          <Section>
+            <Typography
+              variant="h2"
+              component="h2"
+              className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
+            >
+              Với những huấn luyện viên chuyên nghiệp
+            </Typography>
+          </Section>
         </Box>
 
         {/* Swiper Carousel */}

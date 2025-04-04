@@ -23,6 +23,7 @@ import about1 from '../../assets/img/Rectangle27.jpg';
 import about2 from '../../assets/img/Rectangle28.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Section from '../section';
 // import about3 from '../../assets/img/Rectangle27.jpg';
 
 const ClassesCarousel = () => {
@@ -137,13 +138,15 @@ const ClassesCarousel = () => {
             <span className="w-6 h-0.5 bg-blue-500 inline-block ml-2"></span>
           </Typography>
 
-          <Typography
-            variant="h2"
-            component="h2"
-            className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
-          >
-            Tham gia các lớp học bơi của chúng tôi
-          </Typography>
+          <Section>
+            <Typography
+              variant="h2"
+              component="h2"
+              className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
+            >
+              Tham gia các lớp học bơi của chúng tôi
+            </Typography>
+          </Section>
         </Box>
 
         {/* Swiper Carousel */}

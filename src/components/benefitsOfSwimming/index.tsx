@@ -5,6 +5,7 @@ import { Box, Container, Stack, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import Grid from '@mui/material/Grid2';
+import Section from '../section';
 
 export default function BenefitsOfSwimming() {
   return (
@@ -93,25 +94,27 @@ export default function BenefitsOfSwimming() {
 
           {/* Cột phải: 2 ảnh demo */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Stack direction={'row'} gap={4}>
-              <Box className="relative w-full h-72 lg:h-[400px] md:h-40">
-                <Image
-                  src="/images/spring-b.jpg"
-                  alt="Swimmer 5"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </Box>
+            <Section>
+              <Stack direction={'row'} gap={4}>
+                <Box className="relative w-full h-72 lg:h-[400px] md:h-40">
+                  <Image
+                    src="/images/spring-b.jpg"
+                    alt="Swimmer 5"
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </Box>
 
-              <Box className="relative w-full h-74  lg:h-[400px] md:h-40">
-                <Image
-                  src="/images/12.webp"
-                  alt="Swimmer 6"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </Box>
-            </Stack>
+                <Box className="relative w-full h-74  lg:h-[400px] md:h-40">
+                  <Image
+                    src="/images/12.webp"
+                    alt="Swimmer 6"
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </Box>
+              </Stack>
+            </Section>
           </Grid>
         </Grid>
       </Container>

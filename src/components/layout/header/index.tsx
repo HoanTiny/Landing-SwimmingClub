@@ -18,6 +18,186 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 
+// export default function Header() {
+//   const navItems = [
+//     { label: 'Trang chủ', href: '#home', id: 'home' },
+//     { label: 'Dịch vụ', href: '#services', id: 'services' },
+//     { label: 'Lớp học', href: '#classes', id: 'classes' },
+//     { label: 'Đăng ký', href: '#register', id: 'register' },
+//     { label: 'Đội ngũ', href: '#trainers', id: 'trainers' },
+//     { label: 'Về chúng tôi', href: '#about', id: 'about' },
+//   ];
+
+//   const [prevScrollPos, setPrevScrollPos] = useState(0);
+//   const [visible, setVisible] = useState(true);
+//   // State để quản lý đóng/mở Drawer trên mobile
+//   const [mobileOpen, setMobileOpen] = useState(false);
+
+//   const handleDrawerToggle = () => {
+//     setMobileOpen((prevState) => !prevState);
+//   };
+
+//   // Xử lý sự kiện click menu: cuộn mượt đến phần tương ứng
+//   const handleMenuItemClick = (id: string) => {
+//     const element = document.getElementById(id);
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' });
+//     }
+//     // Nếu đang ở mobile, đóng Drawer sau khi click
+//     if (mobileOpen) {
+//       setMobileOpen(false);
+//     }
+//   };
+
+//   // Drawer hiển thị các menu item
+//   const drawer = (
+//     <Box sx={{ width: 250 }} role="presentation" onClick={handleDrawerToggle}>
+//       <List sx={{ padding: 0 }}>
+//         <Box className="bg-blue-600">
+//           <Typography
+//             variant="h6"
+//             noWrap
+//             component="div"
+//             sx={{ mr: 4, fontWeight: 'bold', color: '#fff' }}
+//             className="text-center p-3"
+//           >
+//             PePex
+//           </Typography>
+//         </Box>
+//         {navItems.map((item, index) => (
+//           <ListItem
+//             key={index}
+//             disablePadding
+//             className=" border-b border-gray-200"
+//             onClick={() => handleMenuItemClick(item.id)}
+//           >
+//             <ListItemButton>
+//               <ListItemText primary={item.label} />
+//             </ListItemButton>
+//           </ListItem>
+//         ))}
+//       </List>
+//     </Box>
+//   );
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const currentScrollPos = window.pageYOffset;
+
+//       setVisible(
+//         prevScrollPos > currentScrollPos ||
+//           currentScrollPos <= 100 ||
+//           currentScrollPos >= 400,
+//       );
+//       setPrevScrollPos(currentScrollPos);
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, [prevScrollPos]);
+
+//   // Hàm xử lý cuộn mượt khi click menu
+
+//   const handleClick = (
+//     e: React.MouseEvent<HTMLAnchorElement>,
+//     href: string,
+//   ): void => {
+//     e.preventDefault();
+//     const element = document.querySelector(href);
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <>
+//       <AppBar
+//         position="fixed"
+//         className={`transition-transform duration-500 ${
+//           visible ? 'translate-y-0' : '-translate-y-full'
+//         }`}
+//         elevation={0}
+//         sx={{ backgroundColor: '#4f1fff' }}
+//       >
+//         <Container maxWidth="xl">
+//           <Toolbar disableGutters>
+//             <Typography
+//               variant="h6"
+//               noWrap
+//               component="div"
+//               sx={{ mr: 4, fontWeight: 'bold', color: '#fff' }}
+//             >
+//               CLB THỦ ĐÔ
+//             </Typography>
+//             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+//               {navItems.map((item, index) => (
+//                 <Link
+//                   key={index}
+//                   href={item.href}
+//                   onClick={(e) => handleClick(e, item.href)}
+//                   className="text-white font-medium mr-2 hover:bg-white/10 px-2 py-1 rounded"
+//                 >
+//                   {item.label}
+//                 </Link>
+//               ))}
+//             </Box>
+//             <Button
+//               variant="contained"
+//               sx={{
+//                 ml: { xs: 0, md: 2 },
+//                 backgroundColor: '#1E90FF',
+//                 color: '#fff',
+//                 textTransform: 'none',
+//                 fontWeight: 600,
+//                 '&:hover': {
+//                   backgroundColor: '#187bcd',
+//                 },
+//               }}
+//               onClick={() =>
+//                 window.open(
+//                   'https://www.facebook.com/profile.php?id=100043515746559',
+//                   '_blank',
+//                 )
+//               }
+//             >
+//               Liên hệ
+//             </Button>
+//             <IconButton
+//               sx={{
+//                 ml: 2,
+//                 color: '#fff',
+//                 display: { xs: 'inline-flex', md: 'none' },
+//               }}
+//               onClick={handleDrawerToggle}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </Container>
+//       </AppBar>
+
+//       {/* Drawer cho mobile menu */}
+//       <Drawer
+//         anchor="right"
+//         open={mobileOpen}
+//         onClose={handleDrawerToggle}
+//         sx={{
+//           display: { xs: 'block', md: 'none' },
+//           '& .MuiDrawer-paper': {
+//             boxSizing: 'border-box',
+//             width: 250,
+//           },
+//         }}
+//       >
+//         {drawer}
+//       </Drawer>
+
+//       {/* Thêm khoảng trống dưới AppBar để không bị che nội dung */}
+//       <Toolbar />
+//     </>
+//   );
+// }
+
 export default function Header() {
   const navItems = [
     { label: 'Trang chủ', href: '#home', id: 'home' },
@@ -30,45 +210,45 @@ export default function Header() {
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  // State để quản lý đóng/mở Drawer trên mobile
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  // Xử lý sự kiện click menu: cuộn mượt đến phần tương ứng
   const handleMenuItemClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    // Nếu đang ở mobile, đóng Drawer sau khi click
     if (mobileOpen) {
       setMobileOpen(false);
     }
   };
 
-  // Drawer hiển thị các menu item
   const drawer = (
     <Box sx={{ width: 250 }} role="presentation" onClick={handleDrawerToggle}>
+      <Box className="bg-blue-600">
+        <Typography
+          variant="h6"
+          noWrap
+          component="div"
+          sx={{
+            mr: 4,
+            fontWeight: 'bold',
+            color: '#fff',
+          }}
+          className="text-center p-3"
+        >
+          CLB THỦ ĐÔ
+        </Typography>
+      </Box>
       <List sx={{ padding: 0 }}>
-        <Box className="bg-blue-600">
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 4, fontWeight: 'bold', color: '#fff' }}
-            className="text-center p-3"
-          >
-            PePex
-          </Typography>
-        </Box>
         {navItems.map((item, index) => (
           <ListItem
             key={index}
             disablePadding
-            className=" border-b border-gray-200"
+            className="border-b border-gray-200"
             onClick={() => handleMenuItemClick(item.id)}
           >
             <ListItemButton>
@@ -83,12 +263,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-
-      setVisible(
-        prevScrollPos > currentScrollPos ||
-          currentScrollPos <= 100 ||
-          currentScrollPos >= 400,
-      );
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos <= 100);
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -97,7 +272,6 @@ export default function Header() {
   }, [prevScrollPos]);
 
   // Hàm xử lý cuộn mượt khi click menu
-
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
@@ -113,44 +287,71 @@ export default function Header() {
     <>
       <AppBar
         position="fixed"
-        className={`transition-transform duration-500 ${
+        // Hiệu ứng ẩn/hiện header
+        className={`transition-transform duration-300 ${
           visible ? 'translate-y-0' : '-translate-y-full'
         }`}
         elevation={0}
-        sx={{ backgroundColor: '#4f1fff' }}
+        // Sử dụng gradient + box-shadow nhẹ
+        sx={{
+          background: 'linear-gradient(90deg, #4f1fff 0%, #6A5ACD 100%)',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.15)',
+        }}
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
+            {/* Logo / Tên CLB */}
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 4, fontWeight: 'bold', color: '#fff' }}
+              sx={{
+                mr: 4,
+                fontWeight: 'bold',
+                color: '#fff',
+              }}
+              className="cursor-pointer"
             >
               CLB THỦ ĐÔ
             </Typography>
+
+            {/* Menu desktop */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-white font-medium mr-2 hover:bg-white/10 px-2 py-1 rounded"
+                  className="
+                    text-white 
+                    font-medium 
+                    mr-2 
+                    px-3 
+                    py-2 
+                    rounded 
+                    transition-colors 
+                    duration-200 
+                    hover:bg-white/20
+                  "
                 >
                   {item.label}
                 </Link>
               ))}
             </Box>
+
+            {/* Nút Liên hệ */}
             <Button
               variant="contained"
               sx={{
                 ml: { xs: 0, md: 2 },
-                backgroundColor: '#1E90FF',
+                backgroundColor: '#FFA500', // Màu cam
                 color: '#fff',
                 textTransform: 'none',
                 fontWeight: 600,
+                borderRadius: '20px',
+                paddingX: '16px',
                 '&:hover': {
-                  backgroundColor: '#187bcd',
+                  backgroundColor: '#ff8c00',
                 },
               }}
               onClick={() =>
@@ -162,6 +363,8 @@ export default function Header() {
             >
               Liên hệ
             </Button>
+
+            {/* Nút menu mobile */}
             <IconButton
               sx={{
                 ml: 2,
@@ -176,7 +379,7 @@ export default function Header() {
         </Container>
       </AppBar>
 
-      {/* Drawer cho mobile menu */}
+      {/* Drawer cho mobile */}
       <Drawer
         anchor="right"
         open={mobileOpen}
@@ -192,7 +395,7 @@ export default function Header() {
         {drawer}
       </Drawer>
 
-      {/* Thêm khoảng trống dưới AppBar để không bị che nội dung */}
+      {/* Khoảng trống dưới AppBar để tránh che nội dung */}
       <Toolbar />
     </>
   );

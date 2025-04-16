@@ -23,54 +23,62 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Section from '../section';
 // Dữ liệu demo về các trainer
 const trainersData = [
   {
-    name: 'Ngô Thế Quyền',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
-    image: '/images/trainners/hlv3.jpg',
+    image: '/images/trainners/hlv.jpg',
   },
   {
-    name: 'Tâm Nguyễn',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv1.jpg',
   },
   {
-    name: 'Huyền Trang',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv2.jpg',
   },
-
   {
-    name: 'Nam Thành',
+    name: 'Huấn luyện viên',
+    title: 'Swimming Trainer',
+    image: '/images/trainners/hlv3.jpg',
+  },
+  {
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv4.jpg',
   },
   {
-    name: 'Phùng Khăc Huy',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv5.jpg',
   },
   {
-    name: 'Hà Minh Toàn',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv6.jpg',
   },
   {
-    name: 'Đăng Thu Hiền',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv7.jpg',
   },
   {
-    name: 'Nguyễn Thành',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv8.jpg',
   },
   {
-    name: 'Hà Minh Hữu',
+    name: 'Huấn luyện viên',
     title: 'Swimming Trainer',
     image: '/images/trainners/hlv9.jpg',
+  },
+  {
+    name: 'Huấn luyện viên',
+    title: 'Swimming Trainer',
+    image: '/images/trainners/hlv10.jpg',
   },
 ];
 
@@ -96,15 +104,13 @@ const ProfessionalTrainers = () => {
             <span className="w-6 h-0.5 bg-blue-500 inline-block ml-2"></span>
           </Typography>
 
-          <Section>
-            <Typography
-              variant="h2"
-              component="h2"
-              className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
-            >
-              Với những huấn luyện viên chuyên nghiệp
-            </Typography>
-          </Section>
+          <Typography
+            variant="h2"
+            component="h2"
+            className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
+          >
+            Với những huấn luyện viên chuyên nghiệp
+          </Typography>
         </Box>
 
         {/* Swiper Carousel */}

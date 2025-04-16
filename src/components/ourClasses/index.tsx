@@ -19,8 +19,14 @@ import { Swiper as SwiperType } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import about1 from '../../assets/img/Rectangle27.jpg';
-import about2 from '../../assets/img/Rectangle28.jpg';
+import about1 from '../../assets/img/banner/P1377364.jpg';
+import about2 from '../../assets/img/banner/P1377356.jpg';
+import about3 from '../../assets/img/banner/P1377371.jpg';
+import about4 from '../../assets/img/banner/P1377356.jpg';
+import about5 from '../../assets/img/banner/P1377347.jpg';
+import about6 from '../../assets/img/banner/P1377369.jpg';
+import about7 from '../../assets/img/banner/P1377356.jpg';
+import about8 from '../../assets/img/banner/P1377368.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Section from '../section';
@@ -56,7 +62,7 @@ const ClassesCarousel = () => {
       id: 3,
       title: 'Học kèm thần tốc',
       price: '$350.99',
-      image: about1,
+      image: about3,
       description:
         'Khóa học bơi thần tốc, giúp học viên nắm vững kỹ năng bơi trong thời gian ngắn.',
       lessons: 6,
@@ -67,7 +73,7 @@ const ClassesCarousel = () => {
       id: 4,
       title: 'Chỉnh sửa kỹ thuật',
       price: '$200.99',
-      image: about2,
+      image: about4,
       description:
         'Khóa học chỉnh sửa kỹ thuật bơi, giúp học viên hoàn thiện và nâng cao kỹ năng bơi lội.',
       lessons: 5,
@@ -78,7 +84,7 @@ const ClassesCarousel = () => {
       id: 5,
       title: 'Học bơi sinh tồn trẻ nhỏ',
       price: '$250.99',
-      image: about1,
+      image: about5,
       description:
         'Khóa học bơi sinh tồn dành cho trẻ nhỏ, giúp trẻ tự tin và an toàn trong môi trường nước.',
       lessons: 8,
@@ -89,7 +95,7 @@ const ClassesCarousel = () => {
       id: 6,
       title: 'Huấn luyện thành tích cao',
       price: '$400.99',
-      image: about2,
+      image: about6,
       description:
         'Khóa huấn luyện bơi thành tích cao, dành cho những học viên muốn tham gia thi đấu chuyên nghiệp.',
       lessons: 12,
@@ -100,7 +106,7 @@ const ClassesCarousel = () => {
       id: 7,
       title: 'Các buổi ngoại khoá bơi sông hồ biển',
       price: '$180.99',
-      image: about1,
+      image: about7,
       description:
         'Các buổi ngoại khoá bơi tại sông, hồ, biển, giúp học viên trải nghiệm thực tế và nâng cao kỹ năng.',
       lessons: 4,
@@ -111,7 +117,7 @@ const ClassesCarousel = () => {
       id: 8,
       title: 'Trại hè sinh tồn CLB Thủ Đô',
       price: '$500.99',
-      image: about2,
+      image: about8,
       description:
         'Trại hè sinh tồn do CLB Thủ Đô tổ chức, kết hợp học bơi và các kỹ năng sinh tồn trong môi trường nước.',
       lessons: 10,

@@ -16,8 +16,9 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <title>My App</title>
+        <title>CLB Bơi Thủ Đô</title>
         <meta name="description" content="My App" />
+        <link rel="icon" href="/favicon.jpg" />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

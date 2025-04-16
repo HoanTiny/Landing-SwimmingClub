@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import banner1 from '../../assets/img/banner/banner1.jpg';
-import banner2 from '../../assets/img/banner/banner2.jpg';
-import banner3 from '../../assets/img/banner/banner3.jpg';
+import banner1 from '../../assets/img/banner/P1377355.jpg';
+import banner2 from '../../assets/img/banner/P1377357.jpg';
+import banner3 from '../../assets/img/banner/P1377369.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -47,6 +47,36 @@ const Banner = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper h-full bg-red"
         >
+          <SwiperSlide>
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/banner/P1377351.jpg"
+                alt="banner"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/banner/P1377364.jpg"
+                alt="banner"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/banner/P1377284.jpg"
+                alt="banner"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <div className="relative w-full h-full">
               <Image

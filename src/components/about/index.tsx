@@ -175,7 +175,7 @@ function About() {
               <video
                 id="intro-video"
                 src="/videos/intro.mp4"
-                poster="/images/banner/Bannerintro.png" // Thumbnail image
+                poster="/images/banner/Intro.jpg" // Thumbnail image
                 autoPlay={false}
                 loop
                 muted

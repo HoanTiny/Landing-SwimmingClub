@@ -50,6 +50,16 @@ const Banner = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <Image
+                src="/images/banner/Bannerintro.png"
+                alt="banner"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-full">
+              <Image
                 src="/images/banner/P1377351.jpg"
                 alt="banner"
                 fill

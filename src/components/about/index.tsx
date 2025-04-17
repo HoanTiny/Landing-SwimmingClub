@@ -161,6 +161,65 @@ function About() {
           </Grid>
         </Section>
       </Container>
+
+      {/* Thêm 1 video giới thiệu vê clb */}
+      <Box className="py-12 md:py-6 bg-gray-100 text-black">
+        <Container maxWidth="xl">
+          <Section>
+            <Box
+              className="relative w-full overflow-hidden rounded-lg shadow-lg"
+              sx={{
+                aspectRatio: '16/9',
+              }}
+            >
+              <video
+                id="intro-video"
+                src="/videos/intro.mp4"
+                poster="/images/banner/Bannerintro.png" // Thumbnail image
+                autoPlay={false}
+                loop
+                muted
+                controls
+                className="w-full h-full object-cover"
+                playsInline
+              >
+                <source src="/videos/intro.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <Box
+                id="play-overlay"
+                className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black bg-opacity-50"
+                onClick={() => {
+                  const video = document.getElementById(
+                    'intro-video',
+                  ) as HTMLVideoElement;
+                  const overlay = document.getElementById('play-overlay');
+                  if (video.paused) {
+                    video.play();
+                    if (overlay) {
+                      overlay.style.display = 'none';
+                    }
+                  }
+                }}
+              >
+                <Button
+                  variant="contained"
+                  className="bg-white hover:bg-gray-200 text-black rounded-full p-4 shadow-lg"
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Typography variant="h6" component="span">
+                    ▶
+                  </Typography>
+                </Button>
+              </Box>
+            </Box>
+          </Section>
+        </Container>
+      </Box>
     </Box>
   );
 }

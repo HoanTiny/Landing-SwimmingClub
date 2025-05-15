@@ -31,7 +31,7 @@ export default function BenefitsOfSwimming() {
               variant="h6"
               className="text-blue-400 font-semibold mb-2"
             >
-              Lợi Ích Của Việc Bơi Lội
+              Quyền lợi nhận được khi con tham gia CLB
             </Typography>
 
             <Typography variant="h4" className="font-bold mb-4 leading-tight">
@@ -54,11 +54,11 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Trang Thiết Bị Bơi Lội
+                    Kỹ Năng Bơi Lội Cơ Bản
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    Các lớp học của chúng tôi đảm bảo học viên có đầy đủ trang
-                    thiết bị cần thiết để thành công.
+                    Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4
+                    kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật.
                   </Typography>
                 </div>
               </div>
@@ -67,11 +67,12 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Môi Trường An Toàn &amp; Vui Vẻ
+                    Kỹ Năng Bơi Lội Nâng Cao
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    Chúng tôi cung cấp một không gian học tập an toàn cho mọi
-                    cấp độ bơi, đảm bảo một trải nghiệm thú vị.
+                    Con còn được học cải thiện, tăng độ bền dưới nước giúp con
+                    phát triển thể lực và tự tin hơn trong bất kì môi trường
+                    nào.
                   </Typography>
                 </div>
               </div>
@@ -80,12 +81,34 @@ export default function BenefitsOfSwimming() {
                 <CheckCircleIcon className="text-blue-300 mt-1" />
                 <div>
                   <Typography variant="h6" className="font-semibold">
-                    Cầu Trượt Nước và Đường Trượt
+                    Bổ Sung Dinh Dưỡng Sau Mỗi Buổi Học
                   </Typography>
                   <Typography variant="body2" className="text-gray-400">
-                    An toàn dưới nước là ưu tiên hàng đầu trong các lớp học của
-                    chúng tôi. Chúng tôi dạy các kỹ năng an toàn dưới nước quan
-                    trọng, như nổi và kiểm soát hơi thở, có thể cứu sống.
+                    Có sữa Dalat Milk uống sau mỗi buổi học bổ sung dinh dưỡng
+                  </Typography>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircleIcon className="text-blue-300 mt-1" />
+                <div>
+                  <Typography variant="h6" className="font-semibold">
+                    Tổ Chức Sinh Nhật Hàng Tháng
+                  </Typography>
+                  <Typography variant="body2" className="text-gray-400">
+                    CLB sẽ tổ chức sinh nhật hàng tháng cho các con.
+                  </Typography>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircleIcon className="text-blue-300 mt-1" />
+                <div>
+                  <Typography variant="h6" className="font-semibold">
+                    Tổ Chức Gala-Sự Kiện
+                  </Typography>
+                  <Typography variant="body2" className="text-gray-400">
+                    Các con được tham gia các Gala-Sự kiện thú vị do CLB tổ
+                    chức: 20/10, 8/3, 1/6 , Trung thu,.... để kết nối bạn bè và
+                    thỏa sức vui chơi vào các dịp, ngày lễ đặc biệt
                   </Typography>
                 </div>
               </div>

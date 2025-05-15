@@ -7,6 +7,7 @@ import WhyChooseUs from '@/components/whyChooseUs';
 import { Box } from '@mui/material';
 import Footer from '../footer';
 import RegisterForm from '@/components/registerForm/RegisterForm';
+import TryRegister from '@/components/tryRegister';
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
         <ClassesCarousel />
         <WhyChooseUs />
         <BenefitsOfSwimming />
+        <TryRegister />
         <ProfessionalTrainers />
         <RegisterForm />
       </Box>

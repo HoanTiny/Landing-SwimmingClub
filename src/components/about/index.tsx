@@ -146,6 +146,14 @@ function About() {
                       </Typography>
                     </Box>
                   </Grid>
+                  <Grid size={{ xs: 12, md: 6 }}>
+                    <Box className="flex items-start space-x-2">
+                      <CheckCircleIcon className="text-blue-500 mt-0.5" />
+                      <Typography variant="body1" className="font-medium">
+                        Đội ngũ y tế và đội ngũ cứu hộ chuyên nghiệp
+                      </Typography>
+                    </Box>
+                  </Grid>
                 </Grid>
 
                 {/* CTA Button */}

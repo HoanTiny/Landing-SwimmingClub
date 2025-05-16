@@ -42,7 +42,7 @@ const ClassesCarousel = () => {
       price: '4.500.000 VNĐ',
       image: about6,
       description:
-        ' Khóa học bơi cơ bản theo nhóm, giúp học viên làm quen với nước và phát triển kỹ năng bơi lội cơ bản. Học viên sẽ được hướng dẫn bởi các huấn luyện viên chuyên nghiệp và có kinh nghiệm trong lĩnh vực bơi lội. Khóa học này bao gồm các bài học lý thuyết và thực hành, giúp học viên nắm vững các kỹ thuật bơi cơ bản như bơi ếch, bơi sải, bơi ngửa và bơi bướm. Ngoài ra, học viên cũng sẽ được trang bị kiến thức về an toàn dưới nước và cách xử lý tình huống khẩn cấp.',
+        'Khóa học bơi kèm 1:1,1:2,1:3, tập trung vào từng học viên để đạt hiệu quả cao nhất',
       lessons: 12,
       enrolled: '15+',
       type: 'Chuyên nghiệp',
@@ -53,7 +53,8 @@ const ClassesCarousel = () => {
       price: '2.500.000 VNĐ',
       image: about1,
       description:
-        'Khóa học bơi cơ bản theo nhóm, giúp học viên làm quen với nước và phát triển kỹ năng bơi lội cơ bản.',
+        'Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4 kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật. Con còn được học cải thiện, tăng độ bền dưới nước, học nâng cao kỹ thuật thở dưới nước, bơi đường dài, kỹ thuật xuất phát,  giúp con phát triển thể lực và tự tin hơn trong bất kì môi trường nào.',
+
       lessons: 8,
       enrolled: '60+',
       type: 'Nhóm',
@@ -64,7 +65,8 @@ const ClassesCarousel = () => {
       price: '4.000.000 VNĐ',
       image: about2,
       description:
-        'Khóa học bơi kèm riêng 1-1, tập trung vào từng học viên để đạt hiệu quả cao nhất.',
+        'Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4 kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật. Con còn được học cải thiện, tăng độ bền dưới nước, học nâng cao kỹ thuật thở dưới nước, bơi đường dài, kỹ thuật xuất phát,  giúp con phát triển thể lực và tự tin hơn trong bất kì môi trường nào.',
+
       lessons: 10,
       enrolled: '20+',
       type: 'Cá nhân',
@@ -75,7 +77,8 @@ const ClassesCarousel = () => {
       price: '4.500.000 VNĐ',
       image: about3,
       description:
-        'Khóa học bơi thần tốc, giúp học viên nắm vững kỹ năng bơi trong thời gian ngắn.',
+        'Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4 kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật. Con còn được học cải thiện, tăng độ bền dưới nước, học nâng cao kỹ thuật thở dưới nước, bơi đường dài, kỹ thuật xuất phát,  giúp con phát triển thể lực và tự tin hơn trong bất kì môi trường nào.',
+
       lessons: 6,
       enrolled: '30+',
       type: 'Cá nhân',
@@ -86,7 +89,8 @@ const ClassesCarousel = () => {
       price: '8.000.000 VNĐ',
       image: about4,
       description:
-        'Khóa học chỉnh sửa kỹ thuật bơi, giúp học viên hoàn thiện và nâng cao kỹ năng bơi lội.',
+        'Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4 kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật. Con còn được học cải thiện, tăng độ bền dưới nước, học nâng cao kỹ thuật thở dưới nước, bơi đường dài, kỹ thuật xuất phát,  giúp con phát triển thể lực và tự tin hơn trong bất kì môi trường nào.',
+
       lessons: 5,
       enrolled: '40+',
       type: 'Cá nhân',
@@ -97,7 +101,8 @@ const ClassesCarousel = () => {
       price: '12.000.000 VNĐ',
       image: about5,
       description:
-        'Khóa huấn luyện bơi thành tích cao, dành cho những học viên muốn tham gia thi đấu chuyên nghiệp.',
+        'Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4 kiểu bơi: Ếch-sải-bướm-ngửa 1 cách bài bản và đúng kĩ thuật. Con còn được học cải thiện, tăng độ bền dưới nước, học nâng cao kỹ thuật thở dưới nước, bơi đường dài, kỹ thuật xuất phát,  giúp con phát triển thể lực và tự tin hơn trong bất kì môi trường nào.',
+
       lessons: 8,
       enrolled: '50+',
       type: 'Trẻ em',
@@ -260,7 +265,7 @@ const ClassesCarousel = () => {
 
                     <Typography
                       variant="body2"
-                      className="text-gray-600 mb-4 h-12"
+                      className="text-gray-600 mb-4 min-h-12"
                     >
                       {classItem.description}
                     </Typography>

@@ -14,9 +14,8 @@ export default function WhyChooseUs() {
   const features = [
     { id: 1, text: 'Phương pháp hiện đại' },
     { id: 2, text: '15 năm trên thị trường' },
-    { id: 3, text: 'Thanh toán trả góp' },
-    { id: 4, text: 'Phát triển cá nhân' },
-    { id: 5, text: 'Trang thiết bị hiện đại' },
+    { id: 3, text: 'Phát triển cá nhân' },
+    { id: 4, text: 'Trang thiết bị hiện đại' },
     { id: 6, text: 'Buổi học thử' },
   ];
 
@@ -134,14 +133,16 @@ export default function WhyChooseUs() {
                         variant="h3"
                         className="text-4xl font-bold text-navy-900"
                       >
-                        {stat.count !== undefined && (
+                        {typeof stat.count === 'number' &&
+                        !isNaN(stat.count) ? (
                           <CountUp
                             start={0}
                             end={stat.count}
                             prefix="+"
-                            duration={2}
-                            enableScrollSpy
+                            duration={6}
                           />
+                        ) : (
+                          <span>+0</span>
                         )}
                       </Typography>
                       <Typography variant="body2" className="text-gray-500">

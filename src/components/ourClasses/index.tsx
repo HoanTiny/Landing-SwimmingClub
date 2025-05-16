@@ -49,7 +49,7 @@ const ClassesCarousel = () => {
     },
     {
       id: 2,
-      title: 'Học 1 tháng',
+      title: 'Học học 1 tháng',
       price: '2.500.000 VNĐ',
       image: about1,
       description:
@@ -61,7 +61,7 @@ const ClassesCarousel = () => {
     },
     {
       id: 3,
-      title: 'Học 2 tháng',
+      title: 'Học học 2 tháng',
       price: '4.000.000 VNĐ',
       image: about2,
       description:
@@ -73,7 +73,7 @@ const ClassesCarousel = () => {
     },
     {
       id: 4,
-      title: 'Khóa 3 tháng',
+      title: 'Khóa học 3 tháng',
       price: '4.500.000 VNĐ',
       image: about3,
       description:
@@ -85,7 +85,7 @@ const ClassesCarousel = () => {
     },
     {
       id: 5,
-      title: 'Khóa 6 tháng',
+      title: 'Khóa học 6 tháng',
       price: '8.000.000 VNĐ',
       image: about4,
       description:
@@ -97,7 +97,7 @@ const ClassesCarousel = () => {
     },
     {
       id: 6,
-      title: 'Khóa 1 năm',
+      title: 'Khóa học 1 năm',
       price: '12.000.000 VNĐ',
       image: about5,
       description:

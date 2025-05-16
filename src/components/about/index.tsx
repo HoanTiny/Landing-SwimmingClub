@@ -22,7 +22,8 @@ function About() {
                     <Image
                       src="/images/tranning4.jpg"
                       alt="Swimming pool"
-                      layout="fill"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
                       style={{ objectFit: 'cover' }}
                       priority
                     />
@@ -33,7 +34,8 @@ function About() {
                     <Image
                       src="/images/trainning2.jpg"
                       alt="Child swimming"
-                      layout="fill"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ objectFit: 'cover' }}
                     />
                   </Box>
@@ -43,7 +45,8 @@ function About() {
                     <Image
                       src="/images/trainning3.webp"
                       alt="Kids having fun in pool"
-                      layout="fill"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ objectFit: 'cover' }}
                     />
                   </Box>

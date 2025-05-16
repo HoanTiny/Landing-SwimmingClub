@@ -49,11 +49,131 @@ const Schedule = () => {
     },
     {
       id: 'nguyentuan',
-      name: 'Cơ sở: Nguyễn Tuân - Vũ Trọng Phụng - Mạc Thái Tổ',
-      address: '109 Nguyễn Tuân - 83 Vũ Trọng Phụng - 33 Mạc Thái Tổ',
-      phone: '0854.679.19 - 098.669.9490',
-      period: 'Tháng 6 và Tháng 7',
+      name: 'Cơ sở: Nguyễn Tuân',
+      address: '109 Nguyễn Tuân',
+      phone: '0854.679.198',
+      period: 'Cả năm',
+      summerPeriod: 'Tháng 6 và Tháng 7',
       schedule: [
+        { day: 'Thứ hai', time: '16h30 - 19h15' },
+        { day: 'Thứ ba', time: 'Nghỉ' },
+        { day: 'Thứ tư', time: '16h30 - 19h15' },
+        { day: 'Thứ năm', time: 'Nghỉ' },
+        { day: 'Thứ sáu', time: '16h30 - 19h15' },
+        { day: 'Thứ bảy', time: '8h00 -9h00' },
+        { day: 'Chủ nhật', time: '8h00 -9h00' },
+      ],
+      summerSchedule: [
+        {
+          day: 'Thứ hai',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ ba',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ tư',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ năm',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ sáu',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        { day: 'Thứ 7 - Chủ nhật', time: 'Ngoại khóa' },
+      ],
+    },
+    {
+      id: 'vutrongphung',
+      name: 'Cơ sở: Vũ Trọng Phụng',
+      address: '83 Vũ Trọng Phụng',
+      phone: '098.669.9490',
+      period: 'Cả năm',
+      summerPeriod: 'Tháng 6 và Tháng 7',
+      schedule: [
+        { day: 'Thứ hai', time: '16h30 - 19h15' },
+        { day: 'Thứ ba', time: '16h30 - 19h15' },
+        { day: 'Thứ tư', time: '16h30 - 19h15' },
+        { day: 'Thứ năm', time: '16h30 - 19h15' },
+        { day: 'Thứ sáu', time: '16h30 - 19h15' },
+        { day: 'Thứ bảy', time: '8h00 - 10h00' },
+        { day: 'Chủ nhật', time: 'Nghỉ' },
+      ],
+      summerSchedule: [
+        {
+          day: 'Thứ hai',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ ba',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ tư',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ năm',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        {
+          day: 'Thứ sáu',
+          shifts: [
+            { name: 'Ca 1', time: '6h00 - 7h30' },
+            { name: 'Ca 2', time: '7h30 - 9h00' },
+          ],
+        },
+        { day: 'Thứ 7 - Chủ nhật', time: 'Ngoại khóa' },
+      ],
+    },
+    {
+      id: 'macthaitó',
+      name: 'Cơ sở: Mạc Thái Tổ',
+      address: '33 Mạc Thái Tổ',
+      phone: '0854.679.198',
+      period: 'Cả năm',
+      summerPeriod: 'Tháng 6 và Tháng 7',
+      schedule: [
+        { day: 'Thứ hai', time: '16h00 - 19h00' },
+        { day: 'Thứ ba', time: '16h00 - 19h00' },
+        { day: 'Thứ tư', time: '16h00 - 19h00' },
+        { day: 'Thứ năm', time: 'Nghỉ' },
+        { day: 'Thứ sáu', time: '16h00 - 19h00' },
+        { day: 'Thứ bảy', time: '7h00 - 9h00' },
+        { day: 'Chủ nhật', time: 'Nghỉ' },
+      ],
+      summerSchedule: [
         {
           day: 'Thứ hai',
           shifts: [
@@ -105,6 +225,30 @@ const Schedule = () => {
     (location) => location.id === activeLocation,
   );
 
+  // Determine if we should show summer schedule or regular schedule
+  const isSummerLocation = ['nguyentuan', 'vutrongphung', 'macthaitó'].includes(
+    activeLocation,
+  );
+  const today = new Date();
+  const currentMonth = today.getMonth() + 1; // JavaScript months are 0-indexed
+  const isSummerTime = currentMonth === 6 || currentMonth === 7;
+
+  // Get the appropriate schedule to display
+  // const scheduleToDisplay =
+  //   isSummerLocation && isSummerTime
+  //     ? activeLocationData?.summerSchedule
+  //     : activeLocationData?.schedule;
+
+  const summerScheduleToDisplay = activeLocationData?.summerSchedule;
+  const scheduleToDisplay = activeLocationData?.schedule;
+
+  // Display period text based on whether it's summer time for locations with summer schedules
+  const displayPeriod = isSummerLocation
+    ? isSummerTime
+      ? activeLocationData?.summerPeriod
+      : activeLocationData?.period
+    : activeLocationData?.period;
+
   return (
     <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-16 px-4 md:px-8  relative overflow-hidden">
       {/* Background water wave effect */}
@@ -112,29 +256,6 @@ const Schedule = () => {
         <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-blue-200 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-blue-200 to-transparent"></div>
       </div>
-
-      {/* Swimming animation */}
-      {/* <div className="absolute top-0 left-0 w-full">
-        <div className="relative">
-          <div className="absolute top-0 right-0 transform -translate-y-1/2 opacity-80">
-            <svg
-              width="80"
-              height="30"
-              viewBox="0 0 80 30"
-              className="animate-swim"
-            >
-              <path
-                d="M10,15 Q20,5 30,15 T50,15 T70,15"
-                stroke="white"
-                strokeWidth="2"
-                fill="none"
-              />
-              <circle cx="10" cy="15" r="4" fill="white" />
-              <path d="M16,12 L24,12 L20,18 L16,12" fill="white" />
-            </svg>
-          </div>
-        </div>
-      </div> */}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
@@ -206,41 +327,97 @@ const Schedule = () => {
             </div>
             <div className="mt-4 md:mt-0 px-4 py-2 bg-blue-50 rounded-lg text-blue-800 flex items-center">
               <Calendar size={18} className="mr-2" />
-              <span className="font-medium">{activeLocationData?.period}</span>
+              <span className="font-medium">{displayPeriod}</span>
+              {/* {isSummerLocation && (
+                <span className="ml-2 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
+                  {isSummerTime ? 'Lịch Hè' : 'Lịch Cố Định'}
+                </span>
+              )} */}
             </div>
           </div>
 
           {/* Schedule Grid */}
-          {activeLocationData && (
+          {activeLocationData && scheduleToDisplay && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {activeLocationData.schedule.map((item, index) => (
-                <div
-                  key={index}
-                  className="border border-blue-100 rounded-lg p-4 hover:bg-blue-50 transition-colors duration-200"
-                >
-                  <div className="font-bold text-blue-800 mb-2">{item.day}</div>
-                  {item.time ? (
-                    <div className="flex items-center text-gray-700">
-                      <Clock size={14} className="mr-1" />
-                      <span>{item.time}</span>
-                    </div>
-                  ) : (
-                    <div className="space-y-2">
-                      {item.shifts?.map((shift, shiftIndex) => (
-                        <div
-                          key={shiftIndex}
-                          className="flex items-center text-gray-700"
-                        >
+              <div className="col-span-1 md:col-span-2 lg:col-span-4 text-center mt-4">
+                <h1 className="text-black text-left font-bold">Lịch cố định</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                  {scheduleToDisplay.map((item, index) => (
+                    <div
+                      key={index}
+                      className="border border-blue-100 rounded-lg p-4 hover:bg-blue-50 transition-colors duration-200"
+                    >
+                      <div className="font-bold text-blue-800 mb-2">
+                        {item.day}
+                      </div>
+                      {item.time ? (
+                        <div className="flex items-center text-gray-700">
                           <Clock size={14} className="mr-1" />
-                          <span>
-                            {shift.name}: {shift.time}
-                          </span>
+                          <span>{item.time}</span>
                         </div>
-                      ))}
+                      ) : (
+                        <div className="space-y-2">
+                          {'shifts' in item &&
+                            Array.isArray(item.shifts) &&
+                            item.shifts.map((shift, shiftIndex) => (
+                              <div
+                                key={shiftIndex}
+                                className="flex items-center text-gray-700"
+                              >
+                                <Clock size={14} className="mr-1" />
+                                <span>
+                                  {shift.name}: {shift.time}
+                                </span>
+                              </div>
+                            ))}
+                        </div>
+                      )}
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {summerScheduleToDisplay && (
+                <div className="col-span-1 md:col-span-2 lg:col-span-4 text-center mt-4">
+                  <h1 className="text-black text-left font-bold">
+                    Lịch hè (Chỉ tháng 6 và tháng 7)
+                  </h1>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                    {summerScheduleToDisplay.map((item, index) => (
+                      <div
+                        key={index}
+                        className="border border-blue-100 rounded-lg p-4 hover:bg-blue-50 transition-colors duration-200"
+                      >
+                        <div className="font-bold text-blue-800 mb-2">
+                          {item.day}
+                        </div>
+                        {item.time ? (
+                          <div className="flex items-center text-gray-700">
+                            <Clock size={14} className="mr-1" />
+                            <span>{item.time}</span>
+                          </div>
+                        ) : (
+                          <div className="space-y-2">
+                            {'shifts' in item &&
+                              Array.isArray(item.shifts) &&
+                              item.shifts.map((shift, shiftIndex) => (
+                                <div
+                                  key={shiftIndex}
+                                  className="flex items-center text-gray-700"
+                                >
+                                  <Clock size={14} className="mr-1" />
+                                  <span>
+                                    {shift.name}: {shift.time}
+                                  </span>
+                                </div>
+                              ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

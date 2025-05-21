@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { Box, Button, Typography, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import Image from 'next/image';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 // Import from local assets
 import banner1 from '../../assets/img/banner/P1377355.jpg';
@@ -47,7 +47,7 @@ const Banner = () => {
         />
 
         {/* Wave decorations - bottom */}
-        <Box
+        {/* <Box
           sx={{
             position: 'absolute',
             bottom: 0,
@@ -69,7 +69,7 @@ const Banner = () => {
               backgroundSize: '100% 100%',
             },
           }}
-        />
+        /> */}
 
         <Swiper
           spaceBetween={0}
@@ -96,55 +96,64 @@ const Banner = () => {
                 alt="banner"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover ascept-[2197/945] lg:ascept-[1920/1080] md:ascept-[1920/1080]"
               />
               {/* Content overlay for first slide */}
-              <Box className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent flex items-center z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent flex items-center z-10">
                 <Container maxWidth="lg">
-                  <Box className="max-w-xl pl-4 md:pl-8 animate-fadeIn">
+                  <Box
+                    className="max-w-xl pl-2 md:pl-8 "
+                    suppressHydrationWarning
+                  >
                     <Typography
                       variant="h5"
                       component="div"
-                      className="font-bold text-yellow-300 mb-2 text-base md:text-2xl"
+                      className="font-bold text-yellow-300 mb-2 text-[16px] md:text-2xl"
+                      style={{
+                        fontFamily: 'inherit',
+                        fontSize: 'inherit',
+                        visibility: 'visible',
+                      }}
                     >
                       CLB BƠI THỦ ĐÔ
                     </Typography>
                     <Typography
                       variant="h2"
                       component="h1"
-                      className="text-white font-bold mb-6 text-lg md:text-6xl drop-shadow-lg"
+                      className="text-white font-bold mb-6 text-base md:text-6xl drop-shadow-lg"
+                      style={{
+                        fontFamily: 'inherit',
+                        fontSize: 'inherit',
+                        visibility: 'visible',
+                      }}
                     >
                       Khóa học bơi chuyên nghiệp
                     </Typography>
                     <Typography
                       variant="body1"
-                      className="text-white mb-8 text-sm md:text-lg max-w-md"
+                      className="text-white mb-8 text-xs md:text-lg max-w-md"
+                      style={{
+                        fontFamily: 'inherit',
+                        fontSize: 'inherit',
+                        visibility: 'visible',
+                      }}
                     >
                       Tuyển sinh tham gia khóa mùa hè 2025 với đội ngũ huấn
                       luyện viên hàng đầu và cơ sở vật chất hiện đại
                     </Typography>
-                    <Box className="flex flex-wrap gap-4">
+                    <Box className="flex flex-wrap gap-3">
                       <Button
                         variant="contained"
-                        size="large"
+                        size="medium"
                         href="#register"
-                        className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full shadow-xl text-sm md:text-base"
+                        className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full shadow-xl text-xs md:text-base"
                       >
                         ĐĂNG KÝ NGAY
-                      </Button>
-                      <Button
-                        variant="outlined"
-                        size="large"
-                        component={Link}
-                        href="#classes"
-                        className="border-white text-white hover:bg-white/20 rounded-full text-sm md:text-base"
-                      >
-                        XEM KHÓA HỌC
                       </Button>
                     </Box>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -157,7 +166,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for second slide */}
-              <Box className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue-900/70 flex items-end pb-16 z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue-900/70 flex items-end pb-16 z-10">
                 <Container maxWidth="lg">
                   <Box className="text-center animate-slideUp">
                     <Typography
@@ -183,7 +192,7 @@ const Banner = () => {
                     </Button>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -196,7 +205,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for third slide */}
-              <Box className="absolute inset-0 bg-gradient-to-tl from-transparent to-blue-900/70 flex items-center z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-tl from-transparent to-blue-900/70 flex items-center z-10">
                 <Container maxWidth="lg">
                   <Box className="ml-auto max-w-lg pr-4 md:pr-8 text-right animate-fadeInRight">
                     <Typography
@@ -215,7 +224,7 @@ const Banner = () => {
                     </Typography>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -228,7 +237,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for fourth slide */}
-              <Box className="absolute inset-0 bg-blue-900/30 flex items-center justify-center text-center z-10">
+              {/* <Box className="absolute inset-0 bg-blue-900/30 flex items-center justify-center text-center z-10">
                 <Container maxWidth="md">
                   <Box className="py-8 px-6  rounded-xl animate-zoomIn">
                     <Typography
@@ -254,7 +263,7 @@ const Banner = () => {
                     </Button>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -267,7 +276,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for fifth slide */}
-              <Box className="absolute inset-0 bg-gradient-to-r from-blue-800/60 to-cyan-500/40 flex items-center z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-r from-blue-800/60 to-cyan-500/40 flex items-center z-10">
                 <Container maxWidth="lg">
                   <Box className="max-w-xl pl-4 md:pl-8 animate-fadeIn">
                     <Typography
@@ -295,7 +304,7 @@ const Banner = () => {
                     </Box>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -308,7 +317,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for sixth slide */}
-              <Box className="absolute inset-0 bg-gradient-to-b from-blue-800/50 to-transparent flex items-start pt-16 z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-b from-blue-800/50 to-transparent flex items-start pt-16 z-10">
                 <Container maxWidth="lg">
                   <Box className="max-w-xl mx-auto text-center animate-slideDown">
                     <Typography
@@ -333,7 +342,7 @@ const Banner = () => {
                     </Button>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -346,7 +355,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for seventh slide */}
-              <Box className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-900/60 flex items-center justify-end z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-900/60 flex items-center justify-end z-10">
                 <Container maxWidth="lg">
                   <Box className="max-w-xl mr-4 md:mr-8 text-right animate-fadeInLeft">
                     <Typography
@@ -365,7 +374,7 @@ const Banner = () => {
                     </Typography>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -378,7 +387,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for eighth slide */}
-              <Box className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent flex items-end pb-16 z-10">
+              {/* <Box className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent flex items-end pb-16 z-10">
                 <Container maxWidth="lg">
                   <Box className="text-center animate-slideUp">
                     <Typography
@@ -404,7 +413,7 @@ const Banner = () => {
                     </Button>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
 
@@ -417,7 +426,7 @@ const Banner = () => {
                 className="object-cover"
               />
               {/* Content overlay for ninth slide */}
-              <Box className="absolute inset-0 bg-blue-900/40 flex items-center justify-center text-center z-10">
+              {/* <Box className="absolute inset-0 bg-blue-900/40 flex items-center justify-center text-center z-10">
                 <Container maxWidth="md">
                   <Box className="py-8 px-6 bg-white/10 backdrop-blur-sm rounded-xl animate-zoomIn">
                     <Typography
@@ -449,7 +458,7 @@ const Banner = () => {
                     </Button>
                   </Box>
                 </Container>
-              </Box>
+              </Box> */}
             </div>
           </SwiperSlide>
         </Swiper>

@@ -99,6 +99,7 @@ export default function WhyChooseUs() {
                 <Typography
                   variant="h2"
                   className="text-4xl md:text-5xl font-bold text-navy-900 mb-4"
+                  sx={{ fontFamily: 'Poetsen One, sans-serif' }}
                 >
                   Nơi Hội Tụ
                   <br />

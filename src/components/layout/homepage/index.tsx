@@ -8,6 +8,7 @@ import { Box } from '@mui/material';
 import Footer from '../footer';
 import RegisterForm from '@/components/registerForm/RegisterForm';
 import TryRegister from '@/components/tryRegister';
+import VideoPreview from '@/components/VideoPreview';
 
 function HomePage() {
   return (
@@ -17,6 +18,8 @@ function HomePage() {
       <Box>
         {/* Container  */}
         <About />
+        <VideoPreview />
+
         <ClassesCarousel />
         <WhyChooseUs />
         <BenefitsOfSwimming />

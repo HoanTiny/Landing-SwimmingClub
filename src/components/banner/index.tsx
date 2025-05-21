@@ -105,20 +105,20 @@ const Banner = () => {
                     <Typography
                       variant="h5"
                       component="div"
-                      className="font-bold text-yellow-300 mb-2"
+                      className="font-bold text-yellow-300 mb-2 text-base md:text-2xl"
                     >
                       CLB BƠI THỦ ĐÔ
                     </Typography>
                     <Typography
                       variant="h2"
                       component="h1"
-                      className="text-white font-bold mb-6 text-4xl md:text-6xl drop-shadow-lg"
+                      className="text-white font-bold mb-6 text-lg md:text-6xl drop-shadow-lg"
                     >
                       Khóa học bơi chuyên nghiệp
                     </Typography>
                     <Typography
                       variant="body1"
-                      className="text-white mb-8 text-lg max-w-md"
+                      className="text-white mb-8 text-sm md:text-lg max-w-md"
                     >
                       Tuyển sinh tham gia khóa mùa hè 2025 với đội ngũ huấn
                       luyện viên hàng đầu và cơ sở vật chất hiện đại
@@ -127,9 +127,8 @@ const Banner = () => {
                       <Button
                         variant="contained"
                         size="large"
-                        // component={Link}
                         href="#register"
-                        className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full shadow-xl"
+                        className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full shadow-xl text-sm md:text-base"
                       >
                         ĐĂNG KÝ NGAY
                       </Button>
@@ -138,7 +137,7 @@ const Banner = () => {
                         size="large"
                         component={Link}
                         href="#classes"
-                        className="border-white text-white hover:bg-white/20 rounded-full"
+                        className="border-white text-white hover:bg-white/20 rounded-full text-sm md:text-base"
                       >
                         XEM KHÓA HỌC
                       </Button>
@@ -164,22 +163,21 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Học bơi cùng các chuyên gia
                     </Typography>
                     <Typography
                       variant="body1"
-                      className="text-white mb-6 max-w-xl mx-auto"
+                      className="text-white mb-6 max-w-xl mx-auto text-sm md:text-lg"
                     >
                       Đội ngũ huấn luyện viên giàu kinh nghiệm, tận tâm hướng
                       dẫn
                     </Typography>
                     <Button
                       variant="contained"
-                      // component={Link}
                       href="#trainers"
-                      className="bg-white hover:bg-blue-50 text-blue-800 font-medium rounded-full"
+                      className="bg-white hover:bg-blue-50 text-blue-800 font-medium rounded-full text-sm md:text-base"
                     >
                       GẶP GỠ HUẤN LUYỆN VIÊN
                     </Button>
@@ -204,22 +202,17 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Bể bơi tiêu chuẩn
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       Cơ sở vật chất hiện đại, đảm bảo an toàn tuyệt đối cho mọi
                       học viên
                     </Typography>
-                    {/* <Button
-                      variant="outlined"
-                      component={Link}
-                      href="/co-so-vat-chat"
-                      className="border-white text-white hover:bg-white/20 rounded-full"
-                    >
-                      XEM CƠ SỞ VẬT CHẤT
-                    </Button> */}
                   </Box>
                 </Container>
               </Box>
@@ -241,19 +234,21 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Dành cho mọi lứa tuổi
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       Từ trẻ em đến người lớn, chúng tôi có lộ trình phù hợp cho
                       tất cả
                     </Typography>
                     <Button
                       variant="contained"
-                      // component={Link}
                       href="#services"
-                      className="bg-blue-600 hover:bg-blue-700 text-white rounded-full"
+                      className="bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm md:text-base"
                     >
                       KHÁM PHÁ CHƯƠNG TRÌNH
                     </Button>
@@ -278,20 +273,22 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Học bơi an toàn
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       An toàn là ưu tiên hàng đầu trong mọi bài giảng của chúng
                       tôi
                     </Typography>
                     <Box className="flex gap-4">
                       <Button
                         variant="contained"
-                        // component={Link}
                         href="https://www.facebook.com/profile.php?id=100043515746559"
-                        className="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full"
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full text-sm md:text-base"
                       >
                         LIÊN HỆ NGAY
                       </Button>
@@ -317,19 +314,20 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Trở thành vận động viên bơi lội
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       Đào tạo vận động viên bơi chuyên nghiệp, tham gia các giải
                       đấu
                     </Typography>
                     <Button
                       variant="contained"
-                      // component={Link}
-                      // href="/dao-tao-vdv"
-                      className="bg-blue-600 hover:bg-blue-700 text-white rounded-full"
+                      className="bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm md:text-base"
                     >
                       CHƯƠNG TRÌNH VĐV
                     </Button>
@@ -354,22 +352,17 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Phương pháp giảng dạy hiện đại
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       Áp dụng các phương pháp giảng dạy tiên tiến từ các chuyên
                       gia hàng đầu
                     </Typography>
-                    {/* <Button
-                      variant="outlined"
-                      component={Link}
-                      href="/phuong-phap"
-                      className="border-white text-white hover:bg-white/20 rounded-full"
-                    >
-                      TÌM HIỂU THÊM
-                    </Button> */}
                   </Box>
                 </Container>
               </Box>
@@ -391,22 +384,21 @@ const Banner = () => {
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Lợi ích của bơi lội
                     </Typography>
                     <Typography
                       variant="body1"
-                      className="text-white mb-6 max-w-xl mx-auto"
+                      className="text-white mb-6 max-w-xl mx-auto text-sm md:text-lg"
                     >
                       Tăng cường sức khỏe, phát triển thể chất toàn diện và rèn
                       luyện ý chí
                     </Typography>
                     <Button
                       variant="contained"
-                      // component={Link}
                       href="#benefits"
-                      className="bg-white hover:bg-blue-50 text-blue-800 font-medium rounded-full"
+                      className="bg-white hover:bg-blue-50 text-blue-800 font-medium rounded-full text-sm md:text-base"
                     >
                       LỢI ÍCH CỦA BƠI LỘI
                     </Button>
@@ -431,25 +423,27 @@ const Banner = () => {
                     <Typography
                       variant="h5"
                       component="div"
-                      className="font-bold text-yellow-300 mb-2"
+                      className="font-bold text-yellow-300 mb-2 text-base md:text-2xl"
                     >
                       ƯU ĐÃI ĐẶC BIỆT
                     </Typography>
                     <Typography
                       variant="h3"
                       component="h2"
-                      className="text-white font-bold mb-4"
+                      className="text-white font-bold mb-4 text-lg md:text-4xl"
                     >
                       Giảm 15% học phí khi đăng ký nhóm
                     </Typography>
-                    <Typography variant="body1" className="text-white mb-6">
+                    <Typography
+                      variant="body1"
+                      className="text-white mb-6 text-sm md:text-lg"
+                    >
                       Đăng ký ngay hôm nay để nhận ưu đãi hấp dẫn
                     </Typography>
                     <Button
                       variant="contained"
-                      // component={Link}
                       href="#register"
-                      className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold rounded-full text-sm md:text-base"
                     >
                       ĐĂNG KÝ NHÓM NGAY
                     </Button>

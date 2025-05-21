@@ -132,6 +132,7 @@ const ClassesCarousel = () => {
               variant="h2"
               component="h2"
               className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
+              sx={{ fontFamily: 'Poetsen One, sans-serif' }}
             >
               Tham gia các lớp học bơi của chúng tôi
             </Typography>

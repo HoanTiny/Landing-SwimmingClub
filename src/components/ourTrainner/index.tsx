@@ -108,6 +108,7 @@ const ProfessionalTrainers = () => {
             variant="h2"
             component="h2"
             className="text-4xl md:text-5xl font-bold text-navy-900 mt-2"
+            sx={{ fontFamily: 'Poetsen One, sans-serif' }}
           >
             Với những huấn luyện viên chuyên nghiệp
           </Typography>

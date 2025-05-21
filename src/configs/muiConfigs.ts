@@ -30,6 +30,9 @@ const theme = createTheme({
       '2xl': 1536,
     },
   },
+  typography: {
+    fontFamily: 'Arial, Helvetica, sans-serif',
+  },
 });
 
 export default createTheme(theme);

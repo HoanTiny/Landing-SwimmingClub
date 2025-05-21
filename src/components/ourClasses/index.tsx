@@ -107,39 +107,6 @@ const ClassesCarousel = () => {
       enrolled: '50+',
       type: 'Trẻ em',
     },
-    // {
-    //   id: 7,
-    //   title: 'Khóa học bơi mới',
-    //   price: '4.500.000 VNĐ',
-    //   image: about6,
-    //   description:
-    //     'Khóa huấn luyện bơi thành tích cao, dành cho những học viên muốn tham gia thi đấu chuyên nghiệp.',
-    //   lessons: 12,
-    //   enrolled: '15+',
-    //   type: 'Chuyên nghiệp',
-    // },
-    // {
-    //   id: 7,
-    //   title: 'Các buổi ngoại khoá bơi sông hồ biển',
-    //   price: '$180.99',
-    //   image: about7,
-    //   description:
-    //     'Các buổi ngoại khoá bơi tại sông, hồ, biển, giúp học viên trải nghiệm thực tế và nâng cao kỹ năng.',
-    //   lessons: 4,
-    //   enrolled: '70+',
-    //   type: 'Ngoại khoá',
-    // },
-    // {
-    //   id: 8,
-    //   title: 'Trại hè sinh tồn CLB Thủ Đô',
-    //   price: '$500.99',
-    //   image: about8,
-    //   description:
-    //     'Trại hè sinh tồn do CLB Thủ Đô tổ chức, kết hợp học bơi và các kỹ năng sinh tồn trong môi trường nước.',
-    //   lessons: 10,
-    //   enrolled: '100+',
-    //   type: 'Trại hè',
-    // },
   ];
 
   return (
@@ -156,7 +123,7 @@ const ClassesCarousel = () => {
             className="text-blue-500 font-medium flex items-center justify-center"
           >
             <span className="w-6 h-0.5 bg-blue-500 inline-block mr-2"></span>
-            Our Classes
+            Lớp học cùa chúng tôi
             <span className="w-6 h-0.5 bg-blue-500 inline-block ml-2"></span>
           </Typography>
 
@@ -270,28 +237,6 @@ const ClassesCarousel = () => {
                       {classItem.description}
                     </Typography>
                   </CardContent>
-                  {/* <Box className="pt-4 border-t p-6 border-gray-200 mt-4 flex items-center justify-between">
-                    <Box className="flex items-center text-blue-500">
-                      <BookIcon fontSize="small" className="mr-1" />
-                      <Typography variant="body2" className="font-medium">
-                        Bài học: {classItem.lessons}
-                      </Typography>
-                    </Box>
-
-                    <Box className="flex items-center text-blue-500">
-                      <PersonIcon fontSize="small" className="mr-1" />
-                      <Typography variant="body2" className="font-medium">
-                        Đã đăng ký {classItem.enrolled}
-                      </Typography>
-                    </Box>
-
-                    <Box className="flex items-center text-blue-500">
-                      <ChildCareIcon fontSize="small" className="mr-1" />
-                      <Typography variant="body2" className="font-medium">
-                        {classItem.type}
-                      </Typography>
-                    </Box>
-                  </Box> */}
                 </Card>
               </SwiperSlide>
             ))}

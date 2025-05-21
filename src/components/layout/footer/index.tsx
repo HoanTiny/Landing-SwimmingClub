@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Cột 2: Quick Link (có hiệu ứng hover) */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Quick Link
+              Liên kết nhanh
             </Typography>
             <ul className="list-none space-y-2">
               <li>
@@ -90,7 +90,7 @@ export default function Footer() {
           {/* Cột 3: Popular Services (có hiệu ứng hover) */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Popular Services
+              Dịch vụ phổ biến
             </Typography>
             <ul className="list-none space-y-2">
               <li>
@@ -144,7 +144,7 @@ export default function Footer() {
           {/* Cột 4: Contact Us */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Contact Us
+              Liên hệ chúng tôi
             </Typography>
             <Box className="flex items-start space-x-2 mb-2">
               <LocationOn fontSize="small" className="text-blue-400 mt-1" />

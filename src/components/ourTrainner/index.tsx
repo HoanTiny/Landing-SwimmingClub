@@ -100,7 +100,7 @@ const ProfessionalTrainers = () => {
             className="text-blue-500 font-medium flex items-center justify-center"
           >
             <span className="w-6 h-0.5 bg-blue-500 inline-block mr-2"></span>
-            Our Trainner
+            <span className="text-lg">Đội ngũ huấn luyện viên</span>
             <span className="w-6 h-0.5 bg-blue-500 inline-block ml-2"></span>
           </Typography>
 

@@ -298,7 +298,7 @@ const SwimmingClubPage = () => {
                         <Avatar
                           src="/images/trainners/hlv.jpg"
                           alt="Chủ nhiệm CLB"
-                          className="w-48 h-48 mx-auto mb-4 shadow-2xl ring-4 ring-blue-200 hover:ring-blue-400 transition-all duration-300"
+                          className="!w-48 !h-48 mx-auto mb-4 shadow-2xl ring-4 ring-blue-200 hover:ring-blue-400 transition-all duration-300"
                         />
                         <div className="absolute -top-2 -right-2">
                           <FloatingElement delay={0}>
@@ -537,7 +537,7 @@ const SwimmingClubPage = () => {
         {/* Call to Action với Floating Animation */}
         <Fade in={visible} timeout={3500}>
           <div className="text-center mt-12">
-            <Paper className="p-8 bg-gradient-to-r from-blue-700 to-blue-900 rounded-2xl shadow-2xl relative overflow-hidden">
+            <Paper className="p-8 !bg-gradient-to-r from-blue-700 to-blue-900 !rounded-2xl shadow-2xl relative overflow-hidden">
               {/* Floating Bubbles */}
               <div className="absolute inset-0">
                 {[...Array(8)].map((_, i) => (

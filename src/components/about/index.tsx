@@ -55,7 +55,7 @@ function About() {
                   {/* Experience badge */}
                   <Paper
                     elevation={4}
-                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full flex flex-col items-center justify-center bg-blue-500 text-white z-10 border-solid bottom-3 border-white"
+                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 !rounded-full flex flex-col items-center justify-center !bg-blue-500 text-white z-10 border-solid bottom-3 border-white"
                     sx={{
                       border: '12px solid #fff',
                     }}

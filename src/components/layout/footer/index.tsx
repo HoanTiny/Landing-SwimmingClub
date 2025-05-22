@@ -5,7 +5,7 @@ import { Box, Grid, Link, Typography } from '@mui/material';
 
 export default function Footer() {
   return (
-    <Box className="text-white pt-10 pb-6 bg-gradient-to-r from-blue-700 to-blue-900">
+    <Box className="!text-white pt-10 pb-6 bg-gradient-to-r from-blue-700 to-blue-900">
       {/* Phần nội dung chính của footer */}
       <Box className="max-w-6xl mx-auto px-4">
         <Grid container spacing={4}>
@@ -26,7 +26,7 @@ export default function Footer() {
             <Typography variant="h6" className="font-semibold mb-3">
               Liên kết nhanh
             </Typography>
-            <ul className="list-none space-y-2">
+            <ul className="list-none space-y-2 !text-white">
               <li>
                 <Link
                   href="#home"
@@ -89,7 +89,7 @@ export default function Footer() {
             <Typography variant="h6" className="font-semibold mb-3">
               Dịch vụ phổ biến
             </Typography>
-            <ul className="list-none space-y-2">
+            <ul className="list-none space-y-2 !text-white">
               <li>
                 <Link
                   href="#personal-training"

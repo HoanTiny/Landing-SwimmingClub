@@ -113,9 +113,11 @@ export default function BenefitsOfSwimming() {
                 </div>
 
                 <div className="flex items-start space-x-4 group p-2 rounded-lg hover:bg-blue-900/30 transition-all">
-                  <img
+                  <Image
                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM5M0MzRUQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNiA4aDEydjhhMiAyIDAgMCAxLTIgMkg4YTIgMiAwIDAgMS0yLTJWOHoiLz48cGF0aCBkPSJNMTIgMnY2Ii8+PHBhdGggZD0iTTkgMTNoNiIvPjwvc3ZnPg=="
                     alt="Milk"
+                    width={24}
+                    height={24}
                     className="w-6 h-6 mt-1 text-blue-300 group-hover:scale-110 transition-all"
                   />
                   <div>
@@ -133,9 +135,11 @@ export default function BenefitsOfSwimming() {
                 </div>
 
                 <div className="flex items-start space-x-4 group p-2 rounded-lg hover:bg-blue-900/30 transition-all">
-                  <img
+                  <Image
                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM5M0MzRUQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSIzIiB5PSI0IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHJ4PSIyIiByeT0iMiIvPjxsaW5lIHgxPSIxNiIgeTE9IjIiIHgyPSIxNiIgeTI9IjYiLz48bGluZSB4MT0iOCIgeTE9IjIiIHgyPSI4IiB5Mj0iNiIvPjxsaW5lIHgxPSIzIiB5MT0iMTAiIHgyPSIyMSIgeTI9IjEwIi8+PC9zdmc+"
                     alt="Party"
+                    width={24}
+                    height={24}
                     className="w-6 h-6 mt-1 text-blue-300 group-hover:scale-110 transition-all"
                   />
                   <div>
@@ -153,9 +157,11 @@ export default function BenefitsOfSwimming() {
                 </div>
 
                 <div className="flex items-start space-x-4 group p-2 rounded-lg hover:bg-blue-900/30 transition-all">
-                  <img
+                  <Image
                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM5M0MzRUQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSIzIiB5PSI0IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHJ4PSIyIiByeT0iMiIvPjxwYXRoIGQ9Ik0xNiAydjIiLz48cGF0aCBkPSJNOCAydjIiLz48cGF0aCBkPSJNMyAxMGgxOCIvPjxwYXRoIGQ9Ik04IDE0aDIiLz48cGF0aCBkPSJNMTQgMTRoMiIvPjxwYXRoIGQ9Ik04IDE4aDIiLz48cGF0aCBkPSJNMTQgMThoMiIvPjwvc3ZnPg=="
                     alt="Events"
+                    width={24}
+                    height={24}
                     className="w-6 h-6 mt-1 text-blue-300 group-hover:scale-110 transition-all"
                   />
                   <div>

@@ -1,6 +1,6 @@
 // components/Header.js
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import PoolIcon from '@mui/icons-material/Pool';
 import WavesIcon from '@mui/icons-material/Waves';
@@ -93,7 +93,7 @@ export default function Header() {
   const [visible, setVisible] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
+  const scrollLockRef = useRef(false);
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   const handleMenuItemClick = (item: {
@@ -102,11 +102,15 @@ export default function Header() {
     id: string;
     isRoute?: boolean;
   }) => {
+    setActiveSection(item.id);
+    scrollLockRef.current = true; // Khóa scroll update
+    setTimeout(() => {
+      scrollLockRef.current = false; // Mở lại sau 1s (hoặc 500ms)
+    }, 1000);
+
     if (item.isRoute) {
-      // Điều hướng tới route riêng
       router.push(item.href);
     } else {
-      // Nếu không ở trang chủ, chuyển về trang chủ với hash
       if (pathname !== '/') {
         router.push(`/${item.href}`);
       } else {
@@ -114,12 +118,16 @@ export default function Header() {
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setActiveSection(item.id);
     if (mobileOpen) setMobileOpen(false);
   };
 
   useEffect(() => {
+    console.log('activeSection changed:', activeSection);
+  }, [activeSection]);
+
+  useEffect(() => {
     const handleScroll = () => {
+      if (scrollLockRef.current) return; // Nếu vừa click menu thì bỏ qua scroll update
       const currentScrollPos = window.pageYOffset;
       setVisible(
         prevScrollPos > currentScrollPos ||
@@ -128,12 +136,12 @@ export default function Header() {
       );
       setPrevScrollPos(currentScrollPos);
 
-      // Update active section based on scroll position
       const sections = navItems
         .filter((item) => !item.isRoute)
         .map((item) => item.id);
       for (const section of sections) {
         const element = document.getElementById(section);
+        console.log('element:', element);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 150 && rect.bottom >= 150) {

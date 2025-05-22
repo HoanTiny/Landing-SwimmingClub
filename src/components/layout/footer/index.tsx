@@ -5,7 +5,7 @@ import { Box, Grid, Link, Typography } from '@mui/material';
 
 export default function Footer() {
   return (
-    <Box className="bg-[#0A0A0A] text-white pt-10 pb-6">
+    <Box className="text-white pt-10 pb-6 bg-gradient-to-r from-blue-700 to-blue-900">
       {/* Phần nội dung chính của footer */}
       <Box className="max-w-6xl mx-auto px-4">
         <Grid container spacing={4}>
@@ -14,10 +14,7 @@ export default function Footer() {
             <Typography variant="h5" className="font-bold mb-3">
               CLB THỦ ĐÔ
             </Typography>
-            <Typography
-              variant="body2"
-              className="text-gray-400 leading-relaxed"
-            >
+            <Typography variant="body2" className=" leading-relaxed">
               Chúng tôi cung cấp dịch vụ dạy bơi chuyên nghiệp với đội ngũ huấn
               luyện viên giàu kinh nghiệm và nhiệt huyết. Hãy đến với chúng tôi
               để trải nghiệm những bài học bơi an toàn và hiệu quả nhất!
@@ -168,7 +165,7 @@ export default function Footer() {
 
       {/* Dòng bản quyền */}
       <Box className="max-w-6xl mx-auto mt-8 px-4 border-t border-gray-700 pt-4">
-        <Typography variant="body2" className="text-gray-400 text-center">
+        <Typography variant="body2" className="text-center">
           Copyright © 2025
         </Typography>
       </Box>

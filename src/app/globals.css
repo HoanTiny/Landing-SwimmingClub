@@ -49,3 +49,9 @@ body {
            hover:before:text-blue-400 hover:before:translate-x-1;
   }
 }
+
+@layer components {
+  .bg-main-gradient {
+    @apply bg-gradient-to-r from-blue-700 to-blue-900;
+  }
+}

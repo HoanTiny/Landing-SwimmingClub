@@ -5,6 +5,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import Header from '@/components/layout/header';
 import MUIThemeProvider from 'src/contexts/MUIThemeProvider';
 import { Metadata } from 'next';
+import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.clbthudo.com'),
@@ -49,7 +50,7 @@ export default async function RootLayout({
               </Suspense>
               <div className="min-h-[100vh]">
                 {children}
-                {/* <Footer /> */}
+                <Footer />
               </div>
             </div>
           </MUIThemeProvider>

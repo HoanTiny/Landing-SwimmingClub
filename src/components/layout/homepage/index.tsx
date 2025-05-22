@@ -5,30 +5,42 @@ import ClassesCarousel from '@/components/ourClasses';
 import ProfessionalTrainers from '@/components/ourTrainner';
 import WhyChooseUs from '@/components/whyChooseUs';
 import { Box } from '@mui/material';
-import Footer from '../footer';
 import RegisterForm from '@/components/registerForm/RegisterForm';
 import TryRegister from '@/components/tryRegister';
 import VideoPreview from '@/components/VideoPreview';
 
 function HomePage() {
   return (
-    <Box id="home">
-      <Banner />
-
-      <Box>
-        {/* Container  */}
-        <About />
-        <VideoPreview />
-
-        <ClassesCarousel />
-        <WhyChooseUs />
-        <BenefitsOfSwimming />
-        <TryRegister />
-        <ProfessionalTrainers />
-        <RegisterForm />
+    <Box>
+      <Box id="home">
+        <Banner />
       </Box>
 
-      <Footer />
+      {/* Container  */}
+      <Box id="about">
+        <About />
+      </Box>
+      <Box id="video">
+        <VideoPreview />
+      </Box>
+      <Box id="classes">
+        <ClassesCarousel />
+      </Box>
+      <Box id="why">
+        <WhyChooseUs />
+      </Box>
+      <Box id="benefits">
+        <BenefitsOfSwimming />
+      </Box>
+      <Box id="try">
+        <TryRegister />
+      </Box>
+      <Box id="trainers">
+        <ProfessionalTrainers />
+      </Box>
+      <Box id="register">
+        <RegisterForm />
+      </Box>
     </Box>
   );
 }

@@ -1,24 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/Header.js
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import PoolIcon from '@mui/icons-material/Pool';
 import WavesIcon from '@mui/icons-material/Waves';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import SchoolIcon from '@mui/icons-material/School';
-import StarIcon from '@mui/icons-material/Star';
-import PeopleIcon from '@mui/icons-material/People';
-import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 import CallIcon from '@mui/icons-material/Call';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {
   Container,
   Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
   Box,
   AppBar,
   Toolbar,
@@ -27,11 +19,11 @@ import {
   Tooltip,
   // useTheme,
   // useMediaQuery,
-  Typography,
-  ListItemIcon,
 } from '@mui/material';
 import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { navItems } from 'src/contants';
+import MenuMobile from '../menuMobile';
 
 export default function Header() {
   const router = useRouter();
@@ -39,60 +31,15 @@ export default function Header() {
   // const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const navItems = React.useMemo(
-    () => [
-      { label: 'Trang chủ', href: '#home', id: 'home', icon: <HomeIcon /> },
-      {
-        label: 'Về chúng tôi',
-        href: '#about',
-        id: 'about',
-        icon: <InfoIcon />,
-      },
-      {
-        label: 'Lớp học',
-        href: '#classes',
-        id: 'classes',
-        icon: <SchoolIcon />,
-      },
-      {
-        label: 'Dịch vụ',
-        href: '#services',
-        id: 'services',
-        icon: <PoolIcon />,
-      },
-      {
-        label: 'Quyền lợi',
-        href: '#benefits',
-        id: 'benefits',
-        icon: <StarIcon />,
-      },
-      {
-        label: 'Đội ngũ',
-        href: '#trainers',
-        id: 'trainers',
-        icon: <PeopleIcon />,
-      },
-      {
-        label: 'Đăng ký',
-        href: '#register',
-        id: 'register',
-        icon: <AppRegistrationIcon />,
-      },
-      {
-        label: 'Lịch hoạt động',
-        href: '/schedule',
-        id: 'schedule',
-        isRoute: true,
-        icon: <CalendarMonthIcon />,
-      },
-    ],
-    [],
-  );
-
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
+  const [submenuOpenId, setSubmenuOpenId] = useState<string | null>(null);
+  const [mobileSubmenuOpenId, setMobileSubmenuOpenId] = useState<string | null>(
+    null,
+  );
   const scrollLockRef = useRef(false);
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
@@ -121,6 +68,19 @@ export default function Header() {
     if (mobileOpen) setMobileOpen(false);
   };
 
+  // Xử lý mở/đóng submenu trên desktop
+  const handleSubmenuOpen = (
+    event: React.MouseEvent<HTMLElement>,
+    id: string,
+  ) => {
+    // setSubmenuAnchorEl(event.currentTarget);
+    setSubmenuOpenId(id);
+  };
+  const handleSubmenuClose = () => {
+    // setSubmenuAnchorEl(null);
+    setSubmenuOpenId(null);
+  };
+
   useEffect(() => {
     console.log('activeSection changed:', activeSection);
   }, [activeSection]);
@@ -136,12 +96,20 @@ export default function Header() {
       );
       setPrevScrollPos(currentScrollPos);
 
-      const sections = navItems
-        .filter((item) => !item.isRoute)
-        .map((item) => item.id);
+      // Lấy tất cả id của navItems và children
+      const sections: string[] = [];
+      navItems.forEach((item) => {
+        if (!item.isRoute) {
+          sections.push(item.id);
+
+          if (item.children) {
+            item.children.forEach((child: any) => sections.push(child.id));
+          }
+        }
+      });
+
       for (const section of sections) {
         const element = document.getElementById(section);
-        console.log('element:', element);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 150 && rect.bottom >= 150) {
@@ -156,65 +124,13 @@ export default function Header() {
   }, [prevScrollPos, navItems]);
 
   const drawer = (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
-    >
-      <List sx={{ padding: 0 }}>
-        <Box className="flex justify-center items-center py-4 bg-gradient-to-r from-blue-600 to-cyan-500">
-          <Image
-            src="/images/logoCLBboilan.png"
-            alt="logo"
-            width={120}
-            height={120}
-            className="drop-shadow-md"
-          />
-        </Box>
-        {navItems.map((item, idx) => (
-          <ListItem key={idx} disablePadding>
-            <ListItemButton
-              onClick={() => handleMenuItemClick(item)}
-              className={`transition-all duration-300 ${activeSection === item.id ? 'bg-blue-700/50' : 'hover:bg-blue-600/30'}`}
-            >
-              <ListItemIcon className="text-white">{item.icon}</ListItemIcon>
-              <ListItemText
-                primary={
-                  <Typography
-                    variant="body1"
-                    className="text-white font-medium"
-                  >
-                    {item.label}
-                  </Typography>
-                }
-              />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Box className="absolute bottom-0 w-full p-4 bg-gradient-to-r from-blue-700 to-cyan-600">
-        <Button
-          variant="contained"
-          fullWidth
-          className="bg-white text-blue-600 hover:bg-blue-50 font-bold"
-          sx={{
-            borderRadius: '30px',
-            boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
-            textTransform: 'none',
-            py: 1.2,
-          }}
-          onClick={() =>
-            window.open(
-              'https://www.facebook.com/profile.php?id=100043515746559',
-              '_blank',
-            )
-          }
-          startIcon={<CallIcon />}
-        >
-          Liên hệ ngay
-        </Button>
-      </Box>
-    </Box>
+    <MenuMobile
+      handleMenuItemClick={handleMenuItemClick}
+      activeSection={activeSection}
+      setMobileOpen={setMobileOpen}
+      setMobileSubmenuOpenId={setMobileSubmenuOpenId}
+      mobileSubmenuOpenId={mobileSubmenuOpenId}
+    />
   );
 
   return (
@@ -280,46 +196,138 @@ export default function Header() {
                 '@media (max-width:1120px)': { display: 'none' },
               }}
             >
-              {navItems.map((item, idx) => (
-                <Tooltip key={idx} title={item.label} arrow placement="bottom">
-                  <Button
-                    onClick={() => handleMenuItemClick(item)}
-                    className={`
-                      px-3 mx-1 transition-all duration-300
-                      ${
-                        activeSection === item.id
-                          ? 'bg-white/15 text-white font-medium scale-105'
-                          : 'text-white/90 hover:bg-white/10'
-                      }
-                    `}
-                    sx={{
-                      color: '#fff',
-                      textTransform: 'none',
-                      borderRadius: '8px',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      '&::after':
-                        activeSection === item.id
-                          ? {
-                              content: '""',
-                              position: 'absolute',
-                              bottom: 0,
-                              left: '50%',
-                              transform: 'translateX(-50%)',
-                              width: '60%',
-                              height: '3px',
-                              backgroundColor: '#ffffff',
-                              borderRadius: '3px 3px 0 0',
-                            }
-                          : {},
-                    }}
+              {navItems.map((item, idx) =>
+                item.children ? (
+                  <Box
+                    key={idx}
+                    sx={{ position: 'relative', display: 'inline-block' }}
+                    onMouseEnter={(e) => handleSubmenuOpen(e, item.id)}
+                    onMouseLeave={handleSubmenuClose}
                   >
-                    {item.label}
-                  </Button>
-                </Tooltip>
-              ))}
+                    <Tooltip title={item.label} arrow placement="bottom">
+                      <Button
+                        endIcon={<ArrowDropDownIcon />}
+                        className={`
+                          px-3 mx-1 transition-all duration-300
+                          ${
+                            activeSection === item.id
+                              ? 'bg-white/15 text-white font-medium scale-105'
+                              : 'text-white/90 hover:bg-white/10'
+                          }
+                        `}
+                        sx={{
+                          color: '#fff',
+                          textTransform: 'none',
+                          borderRadius: '8px',
+                          position: 'relative',
+                          overflow: 'hidden',
+                          '&::after':
+                            activeSection === item.id
+                              ? {
+                                  content: '""',
+                                  position: 'absolute',
+                                  bottom: 0,
+                                  left: '50%',
+                                  transform: 'translateX(-50%)',
+                                  width: '60%',
+                                  height: '3px',
+                                  backgroundColor: '#ffffff',
+                                  borderRadius: '3px 3px 0 0',
+                                }
+                              : {},
+                        }}
+                      >
+                        {item.label}
+                      </Button>
+                    </Tooltip>
+                    {/* Submenu desktop */}
+                    <Box
+                      sx={{
+                        display: submenuOpenId === item.id ? 'block' : 'none',
+                        position: 'absolute',
+                        top: '100%',
+                        left: 0,
+                        minWidth: 200,
+                        background: 'white',
+                        boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+                        borderRadius: 2,
+                        zIndex: 1000,
+                        mt: 1,
+                        py: 1,
+                      }}
+                    >
+                      {item.children.map((child) => (
+                        <Button
+                          key={child.id}
+                          fullWidth
+                          sx={{
+                            justifyContent: 'flex-start',
+                            color: '#0073e6',
+                            px: 2,
+                            py: 1,
+                            borderRadius: 1,
+                            '&:hover': {
+                              background: '#f0f8ff',
+                            },
+                          }}
+                          onClick={() => {
+                            handleMenuItemClick(child);
+                            handleSubmenuClose();
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }}
+                        >
+                          {child.label}
+                        </Button>
+                      ))}
+                    </Box>
+                  </Box>
+                ) : (
+                  <Tooltip
+                    key={idx}
+                    title={item.label}
+                    arrow
+                    placement="bottom"
+                  >
+                    <Button
+                      onClick={() => handleMenuItemClick(item)}
+                      className={`
+                        px-3 mx-1 transition-all duration-300
+                        ${
+                          activeSection === item.id
+                            ? 'bg-white/15 text-white font-medium scale-105'
+                            : 'text-white/90 hover:bg-white/10'
+                        }
+                      `}
+                      sx={{
+                        color: '#fff',
+                        textTransform: 'none',
+                        borderRadius: '8px',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        '&::after':
+                          activeSection === item.id
+                            ? {
+                                content: '""',
+                                position: 'absolute',
+                                bottom: 0,
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                width: '60%',
+                                height: '3px',
+                                backgroundColor: '#ffffff',
+                                borderRadius: '3px 3px 0 0',
+                              }
+                            : {},
+                      }}
+                    >
+                      {item.label}
+                    </Button>
+                  </Tooltip>
+                ),
+              )}
             </Box>
 
+            {/* ...contact button & menu icon... */}
             <Box className="flex items-center">
               <Button
                 variant="contained"

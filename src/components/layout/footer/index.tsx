@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#personal-training"
-                  className="text-gray-300 hover:text-blue-400 transition-colors link-hover"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
                 >
                   Huấn luyện cá nhân
@@ -102,7 +102,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#group-classes"
-                  className="text-gray-300 hover:text-blue-400 transition-colors link-hover"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
                 >
                   Lớp học nhóm
@@ -111,7 +111,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#kids-swimming"
-                  className="text-gray-300 hover:text-blue-400 transition-colors link-hover"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
                 >
                   Bơi lội cho trẻ em
@@ -120,7 +120,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#adult-swimming"
-                  className="text-gray-300 hover:text-blue-400 transition-colors link-hover"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
                 >
                   Bơi lội cho người lớn
@@ -129,7 +129,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#advanced-training"
-                  className="text-gray-300 hover:text-blue-400 transition-colors link-hover"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
                 >
                   Đào tạo nâng cao

@@ -2,7 +2,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 import withPWA from '@ducanh2912/next-pwa';
 
 const withNextIntl = createNextIntlPlugin();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
@@ -64,6 +63,7 @@ const pwaConfig = {
     //   },
     // ],
   },
+  maximumFileSizeToCacheInBytes: 26214400, // 25MB
 };
 
 // Kết hợp next-pwa và next-intl

@@ -1,630 +1,366 @@
 /* eslint-disable @next/next/no-img-element */
-'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-  Card,
-  CardContent,
-  Avatar,
-  Chip,
-  Typography,
-  Container,
-  Grid,
-  Paper,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Button,
-  LinearProgress,
-  Fade,
-  Slide,
-  Zoom,
-} from '@mui/material';
-import {
-  EmojiEvents,
-  School,
-  Groups,
-  Pool,
+  Award,
+  Users,
+  Trophy,
   Star,
   CheckCircle,
   Waves,
-  Timer,
-  Security,
-  Favorite,
-  People,
-  AutoAwesome,
-} from '@mui/icons-material';
-import PoolIcon from '@mui/icons-material/Pool';
-import {
-  Users,
-  Phone as PhoneIcon,
-  ArrowRight as ArrowRightIcon,
+  Shield,
+  ThermometerSun,
+  Medal,
 } from 'lucide-react';
 
-const SwimmingClubPage = () => {
-  const [visible, setVisible] = useState(false);
-  const [statsVisible, setStatsVisible] = useState(false);
-
-  useEffect(() => {
-    setVisible(true);
-    const timer = setTimeout(() => setStatsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const achievements = [
-    {
-      text: 'Hơn 10.000 học viên đã tốt nghiệp trong 8 mùa hè liên tiếp',
-      icon: <People className="text-blue-500" />,
-      count: 10000,
-    },
-    {
-      text: 'Hơn 15.000 học viên hoàn thành chương trình đầu biết bơi',
-      icon: <CheckCircle className="text-green-500" />,
-      count: 15000,
-    },
-    {
-      text: 'Đào tạo học sinh đạt giải cấp Quận, Thành phố và Toàn quốc',
-      icon: <EmojiEvents className="text-yellow-500" />,
-      count: 100,
-    },
-    {
-      text: 'Được nhiều phụ huynh tin tưởng trong suốt 8 năm',
-      icon: <Favorite className="text-red-500" />,
-      count: 8,
-    },
-    {
-      text: 'CLB đầu tiên tổ chức trải nghiệm bơi sông - hồ - biển',
-      icon: <AutoAwesome className="text-purple-500" />,
-      count: 1,
-    },
+const SwimmingClubAbout = () => {
+  const highlights = [
+    'Hơn 10.000 học viên đã tốt nghiệp trong 8 mùa hè liên tiếp',
+    'Hơn 15.000 học viên hoàn thành chương trình đầu biết bơi và xử lý tình huống an toàn',
+    'Đào tạo học sinh đạt giải cấp Quận, Thành phố và Toàn quốc',
+    'Được nhiều phụ huynh tin tưởng và lựa chọn trong suốt 8 năm hoạt động',
+    'Là một trong những CLB đầu tiên tổ chức trải nghiệm bơi sông - hồ - biển và kỹ năng sống',
   ];
-
-  const facilities = [
-    {
-      text: 'Hệ thống bể bơi bốn mùa',
-      icon: <PoolIcon className="text-blue-500" />,
-    },
-    {
-      text: 'Chất lượng đạt chuẩn Bộ Y Tế',
-      icon: <Security className="text-green-500" />,
-    },
-    {
-      text: 'Nhiệt độ từ 30-31°C vào mùa đông',
-      icon: <Timer className="text-orange-500" />,
-    },
-    {
-      text: 'Các tiện ích chuyên nghiệp',
-      icon: <Star className="text-yellow-500" />,
-    },
-  ];
-
-  const stats = [
-    {
-      label: 'Học viên đã tốt nghiệp',
-      value: 10000,
-      suffix: '+',
-      color: 'blue',
-    },
-    { label: 'Năm kinh nghiệm', value: 8, suffix: '+', color: 'green' },
-    { label: 'Huy chương đạt được', value: 500, suffix: '+', color: 'yellow' },
-    { label: 'Huấn luyện viên', value: 20, suffix: '+', color: 'purple' },
-  ];
-
-  const CountUp = ({
-    end,
-    duration = 2000,
-    suffix = '',
-  }: {
-    end: number;
-    duration?: number;
-    suffix?: string;
-  }) => {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-      if (!statsVisible) return;
-
-      let startTime: number | undefined;
-      const animate = (currentTime: number) => {
-        if (!startTime) startTime = currentTime;
-        const progress = Math.min((currentTime - startTime) / duration, 1);
-        setCount(Math.floor(progress * end));
-
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    }, [end, duration, statsVisible]);
-
-    return (
-      <span>
-        {count.toLocaleString()}
-        {suffix}
-      </span>
-    );
-  };
-
-  const FloatingElement = ({
-    children,
-    delay = 0,
-  }: {
-    children: React.ReactNode;
-    delay?: number;
-  }) => (
-    <div
-      className="animate-bounce"
-      style={{
-        animationDelay: `${delay}s`,
-        animationDuration: '3s',
-        animationIterationCount: 'infinite',
-      }}
-    >
-      {children}
-    </div>
-  );
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-cyan-50 overflow-hidden">
-      {/* Floating Water Drops Animation */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute w-2 h-2 bg-blue-400 rounded-full opacity-20 animate-ping`}
-            style={{
-              left: `${10 + i * 15}%`,
-              top: `${20 + i * 10}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: '4s',
-            }}
-          />
-        ))}
-      </div>
+    <div className="min-h-screen ">
+      {/* 1. Thông tin về Chủ nhiệm CLB */}
+      <section className="py-16 bg-transparent bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Thông Tin Về Chủ Nhiệm CLB
+            </h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          </div>
 
-      {/* Hero Section với Wave Animation */}
-      <div className="relative bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 text-white py-20 overflow-hidden">
-        {/* Animated Wave Background */}
-        <div className="absolute inset-0">
-          <svg
-            className="absolute bottom-0 w-full h-20"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,50 C300,120 600,0 900,50 C1050,80 1200,50 1200,50 L1200,120 L0,120 Z"
-              fill="rgba(255,255,255,0.1)"
-              className="animate-pulse"
-            />
-          </svg>
-          <svg
-            className="absolute bottom-0 w-full h-16"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,30 C400,100 800,20 1200,60 L1200,120 L0,120 Z"
-              fill="rgba(255,255,255,0.05)"
-              style={{
-                animation: 'wave 6s ease-in-out infinite alternate',
-              }}
-            />
-          </svg>
-        </div>
-
-        <Container maxWidth="lg" className="relative z-10">
-          <Fade in={visible} timeout={1000}>
-            <div className="text-center">
-              <Slide direction="down" in={visible} timeout={800}>
-                <Typography
-                  variant="h2"
-                  className="font-bold mb-4 animate-pulse"
-                >
-                  🏊‍♂️ CLB Bơi Lặn Thủ Đô 🏊‍♀️
-                </Typography>
-              </Slide>
-              <Slide direction="up" in={visible} timeout={1000}>
-                <Typography variant="h5" className="mb-6 opacity-90">
-                  Nơi khởi nguồn đam mê bơi lội - Phát triển toàn diện &quot;Tâm
-                  - Trí - Thể - Lực&quot;
-                </Typography>
-              </Slide>
-              <Zoom in={visible} timeout={1200}>
-                <div className="mt-8">
-                  <Button
-                    variant="contained"
-                    size="large"
-                    className="bg-main-gradient hover:bg-blue-900 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse"
-                    startIcon={<Pool />}
-                    href="https://forms.gle/AErv2dcfnJhaDaAs9"
-                  >
-                    🌊 Đăng Ký Ngay 🌊
-                  </Button>
-                </div>
-              </Zoom>
-            </div>
-          </Fade>
-        </Container>
-      </div>
-
-      {/* Stats Counter Section */}
-      <Container maxWidth="lg" className="relative z-10 -mt-10 ">
-        <Slide direction="up" in={statsVisible} timeout={800}>
-          <Paper className="p-6 rounded-2xl shadow-2xl bg-white/90 backdrop-blur-sm">
-            <Grid container spacing={4}>
-              {stats.map((stat, index) => (
-                <Grid item xs={6} md={3} key={index}>
-                  <div className="text-center p-4 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 hover:scale-105 transition-transform duration-300">
-                    <Typography
-                      variant="h3"
-                      className={`font-bold text-${stat.color}-600 mb-2`}
-                    >
-                      <CountUp end={stat.value} suffix={stat.suffix} />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      className="text-gray-600 font-medium"
-                    >
-                      {stat.label}
-                    </Typography>
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            <div className="md:flex">
+              {/* Hình ảnh Chủ nhiệm */}
+              <div className="md:w-1/3 bg-gradient-to-br from-blue-600 to-blue-700 p-8 text-white">
+                <div className="text-center">
+                  <div className="w-56 h-56 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center backdrop-blur-sm border-4 border-white/30">
+                    <img
+                      src="/images/trainners/hlv.jpg"
+                      alt="HLV"
+                      className="w-full h-full rounded-full object-cover border-2 border-white"
+                    />
                   </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Paper>
-        </Slide>
-      </Container>
-
-      <Container maxWidth="lg" className="py-12 relative z-10">
-        {/* Director Section với Animation */}
-        <Fade in={visible} timeout={1500}>
-          <Card className="mb-12 shadow-2xl rounded-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-            <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-wave-pattern opacity-10"></div>
-              <Typography
-                variant="h4"
-                className="text-white font-bold text-center relative z-10"
-              >
-                🏆 Thông Tin Chủ Nhiệm CLB 🏆
-              </Typography>
-            </div>
-            <CardContent className="p-8">
-              <Grid container spacing={6} alignItems="center">
-                <Grid item xs={12} md={4}>
-                  <Zoom in={visible} timeout={1500}>
-                    <div className="text-center">
-                      <div className="relative">
-                        <Avatar
-                          src="/images/trainners/hlv.jpg"
-                          alt="Chủ nhiệm CLB"
-                          className="!w-48 !h-48 mx-auto mb-4 shadow-2xl ring-4 ring-blue-200 hover:ring-blue-400 transition-all duration-300"
-                        />
-                        <div className="absolute -top-2 -right-2">
-                          <FloatingElement delay={0}>
-                            <EmojiEvents className="text-yellow-500 text-3xl" />
-                          </FloatingElement>
-                        </div>
-                      </div>
-                      <div className="flex justify-center gap-2 flex-wrap">
-                        <Chip
-                          label="🥇 Cựu VĐV Quốc Gia"
-                          color="primary"
-                          icon={<EmojiEvents />}
-                          className="font-semibold animate-pulse"
-                        />
-                        <Chip
-                          label="📚 Huấn Luyện Viên"
-                          color="success"
-                          icon={<School />}
-                          className="font-semibold animate-pulse"
-                        />
-                      </div>
-                    </div>
-                  </Zoom>
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <List className="space-y-3">
-                    {[
-                      {
-                        icon: <EmojiEvents className="text-yellow-500" />,
-                        primary: '🏅 Cựu vận động viên đội tuyển Quốc gia',
-                        secondary:
-                          'Sở hữu nhiều huy chương các loại trong sự nghiệp thi đấu',
-                        bg: 'bg-yellow-50',
-                      },
-                      {
-                        icon: <School className="text-green-500" />,
-                        primary:
-                          '🎓 Bằng kiện tướng bơi lội cấp Quốc gia, Quốc tế',
-                        secondary:
-                          'Chứng chỉ trọng tài quốc tế do Liên đoàn, Tổng cục TDTT cấp',
-                        bg: 'bg-green-50',
-                      },
-                      {
-                        icon: <Groups className="text-purple-500" />,
-                        primary: '👥 Đào tạo hơn 1.200 học sinh mỗi năm',
-                        secondary:
-                          'Trên toàn địa bàn Hà Nội với nhiều học viên đạt huy chương các cấp',
-                        bg: 'bg-purple-50',
-                      },
-                      {
-                        icon: <Waves className="text-cyan-500" />,
-                        primary: '🌊 Tiên phong tổ chức bơi ngoại khóa',
-                        secondary:
-                          'Tại sông, hồ, biển giúp nâng cao kỹ năng phòng tránh đuối nước',
-                        bg: 'bg-cyan-50',
-                      },
-                    ].map((item, index) => (
-                      <Slide
-                        direction="right"
-                        in={visible}
-                        timeout={1000 + index * 200}
-                        key={index}
-                      >
-                        <ListItem
-                          className={`${item.bg} rounded-lg hover:scale-102 transition-all duration-300 hover:shadow-md`}
-                        >
-                          <ListItemIcon>{item.icon}</ListItemIcon>
-                          <ListItemText
-                            primary={item.primary}
-                            secondary={item.secondary}
-                            primaryTypographyProps={{ fontWeight: 'bold' }}
-                          />
-                        </ListItem>
-                      </Slide>
-                    ))}
-                  </List>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
-        </Fade>
-
-        {/* Club Introduction với Parallax Effect */}
-        <Fade in={visible} timeout={2000}>
-          <Card className="mb-12 shadow-2xl rounded-2xl overflow-hidden hover:shadow-3xl transition-all duration-500">
-            <div className="bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-600 p-6">
-              <Typography
-                variant="h4"
-                className="text-white font-bold text-center"
-              >
-                🏊‍♂️ Giới Thiệu CLB Bơi Lặn Thủ Đô 🏊‍♀️
-              </Typography>
-            </div>
-            <CardContent className="p-8">
-              <Grid container spacing={6}>
-                <Grid item xs={12} md={6}>
-                  <Zoom in={visible} timeout={2000}>
-                    <div className="relative group">
-                      <img
-                        src="/images/banner/P1377347.jpg"
-                        alt="CLB Bơi Lặn Thủ Đô"
-                        className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-xl"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <Typography variant="h6" className="font-bold">
-                          🏊‍♀️ Bể bơi hiện đại
-                        </Typography>
-                      </div>
-                    </div>
-                  </Zoom>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <Slide direction="left" in={visible} timeout={2200}>
-                    <div>
-                      <Typography
-                        variant="h6"
-                        className="mb-4 text-gray-800 leading-relaxed"
-                      >
-                        🌟 CLB Bơi Lặn Thủ Đô là một môi trường học tập và rèn
-                        luyện chuyên nghiệp dành cho trẻ em và thanh thiếu niên
-                        yêu thích bộ môn bơi lội.
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        className="mb-4 text-gray-700 leading-relaxed"
-                      >
-                        💪 Với định hướng{' '}
-                        <strong>&quot;Tâm - Trí - Thể - Lực&quot;</strong>, CLB
-                        không chỉ dạy bơi an toàn mà còn chú trọng phát triển
-                        thể lực, tinh thần kỷ luật và sự tự tin cho mỗi học
-                        viên.
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        className="text-gray-700 leading-relaxed"
-                      >
-                        🏅 Hoạt động tại chuỗi bể bơi hàng đầu Hà Nội, đảm bảo
-                        an toàn sức khỏe của học viên với đội ngũ huấn luyện
-                        viên có chuyên môn cao, giàu kinh nghiệm.
-                      </Typography>
-                    </div>
-                  </Slide>
-                </Grid>
-              </Grid>
-
-              <Divider className="my-8" />
-
-              <Slide direction="up" in={visible} timeout={2500}>
-                <div>
-                  <Typography
-                    variant="h5"
-                    className="mb-6 text-center font-bold text-gray-800"
-                  >
-                    🏊‍♂️ Tiện Ích Chuyên Nghiệp 🏊‍♀️
-                  </Typography>
-                  <Grid container spacing={3}>
-                    {facilities.map((facility, index) => (
-                      <Grid item xs={12} sm={6} key={index}>
-                        <Zoom in={visible} timeout={2500 + index * 100}>
-                          <Paper className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                            <div className="flex items-center">
-                              <div className="mr-3 animate-pulse">
-                                {facility.icon}
-                              </div>
-                              <Typography
-                                variant="body1"
-                                className="font-medium"
-                              >
-                                {facility.text}
-                              </Typography>
-                            </div>
-                          </Paper>
-                        </Zoom>
-                      </Grid>
-                    ))}
-                  </Grid>
+                  <h3 className="text-2xl font-bold mb-2">Thầy Quyền</h3>
+                  <p className="text-blue-100 text-lg font-medium">
+                    Chủ Nhiệm CLB
+                  </p>
+                  <div className="mt-4 inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                    <Medal className="w-5 h-5 mr-2" />
+                    <span className="text-sm">Cựu VĐV Đội tuyển Quốc gia</span>
+                  </div>
                 </div>
-              </Slide>
-            </CardContent>
-          </Card>
-        </Fade>
-
-        {/* Achievements Section với Stagger Animation */}
-        <Fade in={visible} timeout={3000}>
-          <Card className="shadow-2xl rounded-2xl overflow-hidden">
-            <div className="bg-gradient-to-r from-orange-500 via-red-400 to-pink-500 p-6">
-              <Typography
-                variant="h4"
-                className="text-white font-bold text-center"
-              >
-                ⭐ Điểm Nổi Bật ⭐
-              </Typography>
-            </div>
-            <CardContent className="p-8">
-              <Grid container spacing={4}>
-                {achievements.map((achievement, index) => (
-                  <Grid item xs={12} md={6} key={index}>
-                    <Slide
-                      direction={index % 2 === 0 ? 'right' : 'left'}
-                      in={visible}
-                      timeout={3000 + index * 200}
-                    >
-                      <Paper className="p-6 h-full bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1 flex-shrink-0 group-hover:animate-spin">
-                            {achievement.icon}
-                          </div>
-                          <Typography
-                            variant="body1"
-                            className="font-medium text-gray-800 leading-relaxed group-hover:text-blue-600 transition-colors duration-300"
-                          >
-                            {achievement.text}
-                          </Typography>
-                        </div>
-                        <LinearProgress
-                          variant="determinate"
-                          value={85}
-                          className="mt-3 rounded-full"
-                          sx={{
-                            backgroundColor: 'rgba(0,0,0,0.1)',
-                            '& .MuiLinearProgress-bar': {
-                              backgroundColor: '#f97316',
-                            },
-                          }}
-                        />
-                      </Paper>
-                    </Slide>
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
-        </Fade>
-
-        {/* Call to Action với Floating Animation */}
-        <Fade in={visible} timeout={3500}>
-          <div className="text-center mt-12">
-            <Paper className="p-8 !bg-gradient-to-r from-blue-700 to-blue-900 !rounded-2xl shadow-2xl relative overflow-hidden">
-              {/* Floating Bubbles */}
-              <div className="absolute inset-0">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-4 h-4 bg-white/20 rounded-full animate-ping"
-                    style={{
-                      left: `${10 + i * 10}%`,
-                      top: `${20 + (i % 3) * 20}%`,
-                      animationDelay: `${i * 0.3}s`,
-                      animationDuration: '3s',
-                    }}
-                  />
-                ))}
               </div>
 
-              <div className="p-8 md:p-10 text-center">
-                <div className="max-w-3xl mx-auto">
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    Đăng Ký Học Thử Miễn Phí Ngay Hôm Nay!
-                  </h3>
-                  <p className="text-blue-100 mb-8">
-                    Cho con trải nghiệm ngay buổi học đầu tiên cùng đội ngũ HLV
-                    chuyên nghiệp tại CLB Bơi Thủ Đô
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSfd6QDKqJPiWCN_rg1WE3GMbBIAvYTgYKJRIWAfia4s_SAY6Q/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                    >
-                      <span className="mr-2">ĐĂNG KÝ HỌC THỬ NGAY</span>
-                      <ArrowRightIcon size={20} />
-                    </a>
-
-                    <a
-                      href="tel:0368123456"
-                      className="inline-flex items-center justify-center bg-white hover:bg-blue-50 text-blue-800 font-medium py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1"
-                    >
-                      <PhoneIcon size={18} className="mr-2" />
-                      <span>Hotline: 0968 156 663</span>
-                    </a>
+              {/* Thông tin chi tiết */}
+              <div className="md:w-2/3 p-8">
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Trophy className="w-5 h-5 text-yellow-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Thành tích thi đấu
+                      </h4>
+                      <p className="text-gray-700">
+                        Cựu vận động viên đội tuyển Quốc gia, sở hữu nhiều huy
+                        chương các loại trong sự nghiệp thi đấu.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="mt-8 flex items-center justify-center">
-                    <Users size={18} className="text-blue-300 mr-2" />
-                    <span className="text-blue-100 text-sm">
-                      Đã có hơn 15,000 học viên đăng ký thành công
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Award className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Bằng cấp chuyên môn
+                      </h4>
+                      <p className="text-gray-700">
+                        Có bằng kiện tướng bơi lội cấp Quốc gia, Quốc tế và
+                        chứng chỉ trọng tài quốc tế do Liên đoàn, Tổng cục TDTT
+                        cấp.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Users className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Kinh nghiệm xây dựng CLB
+                      </h4>
+                      <p className="text-gray-700 mb-3">
+                        Với nhiều năm kinh nghiệm đã xây dựng và phát triển CLB
+                        Bơi Lặn Thủ Đô tại Hà Nội:
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">
+                            Đào tạo hơn 1.200 học sinh mỗi năm trên toàn địa bàn
+                            Hà Nội
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">
+                            Nhiều học viên đạt huy chương cấp Quận, Thành phố và
+                            Toàn quốc
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Waves className="w-5 h-5 text-cyan-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Chương trình đặc biệt
+                      </h4>
+                      <p className="text-gray-700 mb-3">
+                        Tiên phong tổ chức các buổi bơi ngoại khóa tại sông, hồ,
+                        biển giúp học sinh:
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                          <span className="text-gray-700">
+                            Nâng cao kỹ năng phòng tránh đuối nước
+                          </span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                          <span className="text-gray-700">
+                            Tự tin khi bơi ngoài trời
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Giới thiệu CLB */}
+      <div className="min-h-screen bbg-transparent bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid lg:grid-cols-1 gap-12 items-center">
+            <div className="text-center ">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Đôi nét về CLB Bơi Lặn Thủ Đô
+              </h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            {/* Content Section */}
+            <div className="space-y-8 p-8">
+              {/* Introduction */}
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Môi trường học tập
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    {' '}
+                    chuyên nghiệp
+                  </span>
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                  <strong>CLB Bơi Lặn Thủ Đô</strong> là một môi trường học tập
+                  và rèn luyện chuyên nghiệp dành cho trẻ em và thanh thiếu niên
+                  yêu thích bộ môn bơi lội.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Với định hướng{' '}
+                  <strong className="text-blue-600">
+                    &quot;Tâm - Trí - Thể - Lực&quot;
+                  </strong>
+                  , CLB không chỉ dạy bơi an toàn mà còn chú trọng phát triển
+                  thể lực, tinh thần kỷ luật và sự tự tin cho mỗi học viên.
+                </p>
+              </div>
+
+              {/* Facilities Card */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Cơ sở vật chất hàng đầu
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Hoạt động tại chuỗi bể bơi hàng đầu Hà Nội, đảm bảo an toàn
+                  sức khỏe của học viên với:
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4 ">
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Hệ thống bể bơi bốn mùa
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Hoạt động quanh năm
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-3 bg-gray-50  rounded-2xl shadow-lg border border-gray-100">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Chất lượng đạt chuẩn
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Theo tiêu chuẩn Bộ Y Tế
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-xl">
+                    <ThermometerSun className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Nhiệt độ ổn định
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        30-31°C mùa đông
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Tiện ích chuyên nghiệp
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Đầy đủ trang thiết bị
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Coaching Team Card */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Users className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Đội ngũ huấn luyện viên chuyên nghiệp
+                  </h3>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  CLB có đội ngũ huấn luyện viên có chuyên môn cao, giàu kinh
+                  nghiệm là vận động viên bơi, các cử nhân sư phạm thể dục thể
+                  thao luôn đồng hành sát sao cùng từng học viên.
+                </p>
+
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <Award className="w-5 h-5 text-amber-500" />
+                    <span className="text-sm font-medium text-gray-700">
+                      Vận động viên chuyên nghiệp
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="w-5 h-5 text-amber-500" />
+                    <span className="text-sm font-medium text-gray-700">
+                      Cử nhân sư phạm TDTT
                     </span>
                   </div>
                 </div>
               </div>
-            </Paper>
+            </div>
+
+            {/* Hero Card Section */}
+            <div className="relative rounded-md overflow-hidden shadow-lg ml-8 mr-8">
+              <img
+                src="/images/banner/P1377347.jpg"
+                className="w-full"
+                alt=""
+              />
+            </div>
           </div>
-        </Fade>
-      </Container>
+        </div>
+      </div>
+      {/* 3. Điểm nổi bật */}
+      <section className="py-16 bg-transparent bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Điểm Nổi Bật
+            </h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          </div>
 
-      <style jsx>{`
-        @keyframes wave {
-          0% {
-            transform: translateX(-100px);
-          }
-          100% {
-            transform: translateX(100px);
-          }
-        }
+          <div className="grid gap-6">
+            {highlights.map((highlight, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-gray-800 leading-relaxed font-medium">
+                    {highlight}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-        .animate-pulse {
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        .hover\\:scale-102:hover {
-          transform: scale(1.02);
-        }
-
-        .hover\\:scale-105:hover {
-          transform: scale(1.05);
-        }
-
-        .hover\\:scale-110:hover {
-          transform: scale(1.1);
-        }
-      `}</style>
+          {/* Highlight số liệu */}
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-blue-600 mb-2">
+                10,000+
+              </div>
+              <p className="text-gray-600">Học viên tốt nghiệp</p>
+            </div>
+            <div className="text-center bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-green-600 mb-2">
+                15,000+
+              </div>
+              <p className="text-gray-600">Học viên an toàn</p>
+            </div>
+            <div className="text-center bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-orange-600 mb-2">8</div>
+              <p className="text-gray-600">Năm kinh nghiệm</p>
+            </div>
+            <div className="text-center bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-purple-600 mb-2">
+                1,200+
+              </div>
+              <p className="text-gray-600">Học sinh/năm</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default SwimmingClubPage;
+export default SwimmingClubAbout;

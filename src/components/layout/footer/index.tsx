@@ -24,52 +24,52 @@ export default function Footer() {
           {/* Cột 2: Quick Link (có hiệu ứng hover) */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Liên kết nhanh
+              Hệ thống các cơ sở
             </Typography>
             <ul className="list-none space-y-2 !text-white">
               <li>
                 <Link
-                  href="#home"
+                  href="#location1"
                   className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Trang chủ
+                  Cơ sở 1: 234 Hoàng Quốc Việt, Cầu Giấy, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="#location2"
                   className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Dịch vụ
+                  Cơ sở 2: 109 Nguyễn Tuân, Thanh Xuân, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#classes"
+                  href="#location3"
                   className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Lớp học
+                  Cơ sở 3: 83 Vũ Trọng Phụng, Thanh Xuân, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#register"
+                  href="#location4"
                   className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Đăng ký
+                  Cơ sở 4: 33 Mạc Thái Tổ, Yên Hòa, Cầu Giấy, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#trainers"
+                  href="#location5"
                   className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Đội ngũ
+                  Cơ sở 5: Học viện An Ninh 58 Đường 19/5, P. Văn Quán
                 </Link>
               </li>
             </ul>
@@ -129,7 +129,7 @@ export default function Footer() {
               <Phone fontSize="small" className="text-blue-400" />
               <Link
                 href="tel:+84968156663"
-                className="text-gray-300 hover:text-blue-400 transition-colors"
+                className="!text-gray-300 hover:text-blue-400 transition-colors"
                 underline="none"
               >
                 +84 968 156 663

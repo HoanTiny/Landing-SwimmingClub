@@ -89,9 +89,9 @@ export default function BenefitsOfSwimming() {
                       Đào Tạo 4 Kiểu Bơi Bài Bản
                     </Typography>
                     <Typography variant="body2" className="text-gray-200">
-                      Con được học nâng cao các kiểu bơi đã có và hoàn thiện 4
-                      kiểu bơi: Ếch - Sải - Bướm - Ngửa một cách bài bản và đúng
-                      kỹ thuật.
+                      Học viên được chỉnh sửa các kiểu bơi hiện tại và học thêm
+                      các kiểu bơi mới: Ếch-sải -ngửa-bướm một cách bài bản và
+                      đúng kĩ thuật và nâng cao thi đấu.
                     </Typography>
                   </div>
                 </div>
@@ -106,8 +106,11 @@ export default function BenefitsOfSwimming() {
                       Phát Triển Thể Lực & Sự Tự Tin
                     </Typography>
                     <Typography variant="body2" className="text-gray-200">
-                      Con được học cải thiện, tăng độ bền dưới nước giúp phát
-                      triển thể lực và tự tin hơn trong bất kỳ môi trường nào.
+                      Luyện tập và nâng cao sức bền dưới nước, tốc độ các kiểu
+                      bơi; học nâng cao các kỹ thuật như santo, xuất phát, bơi
+                      đường dài giúp con phát triển thể lực và tự tin hơn trong
+                      bất kì môi trường nào. Và được tham gia thi đấu các giải
+                      bơi cấp Quận, Thành phố và Toàn quốc.
                     </Typography>
                   </div>
                 </div>
@@ -125,11 +128,14 @@ export default function BenefitsOfSwimming() {
                       variant="h6"
                       className="font-semibold text-lg text-blue-100"
                     >
-                      Dinh Dưỡng Sau Mỗi Buổi Học
+                      Dinh Dưỡng
                     </Typography>
                     <Typography variant="body2" className="text-gray-200">
-                      Có sữa Dalat Milk uống sau mỗi buổi học bổ sung dinh dưỡng
-                      giúp con phục hồi năng lượng.
+                      Được hướng dẫn chế độ tập luyện phù hợp theo độ tuổi kết
+                      hợp dinh dưỡng hợp lý, hỗ trợ phát triển chiều cao hiệu
+                      quả và cải thiện sức khỏe, phòng ngừa bệnh tật một cách
+                      khoa học.Có sữa Dalat Milk uống sau mỗi buổi học bổ sung
+                      dinh dưỡng giúp con phục hồi năng lượng.
                     </Typography>
                   </div>
                 </div>
@@ -147,11 +153,14 @@ export default function BenefitsOfSwimming() {
                       variant="h6"
                       className="font-semibold text-lg text-blue-100"
                     >
-                      Tiệc Sinh Nhật Hàng Tháng
+                      Môi Trường Học Tập Thoải Mái & An Toàn
                     </Typography>
                     <Typography variant="body2" className="text-gray-200">
-                      CLB sẽ tổ chức sinh nhật hàng tháng cho các con, tạo không
-                      khí vui vẻ và gắn kết.
+                      Được học trong môi trường an toàn – thân thiện – chuyên
+                      nghiệp: Trang thiết bị hiện đại, nước bể được xử lý sạch
+                      sẽ, đảm bảo chuẩn an toàn vệ sinh cho học viên. Cùng đội
+                      ngũ HlV giàu kinh nghiệm , là cựu vận động viên bơi, các
+                      cử nhân sư phạm thể dục thể thao ham gia giảng dạy
                     </Typography>
                   </div>
                 </div>
@@ -174,7 +183,8 @@ export default function BenefitsOfSwimming() {
                     <Typography variant="body2" className="text-gray-200">
                       Các con được tham gia các Gala-Sự kiện thú vị do CLB tổ
                       chức: 20/10, 8/3, 1/6, Trung thu,... để kết nối bạn bè và
-                      thỏa sức vui chơi.
+                      thỏa sức vui chơi. CLB sẽ tổ chức sinh nhật hàng tháng cho
+                      các con, tạo không khí vui vẻ và gắn kết.
                     </Typography>
                   </div>
                 </div>

@@ -112,10 +112,18 @@ function About() {
                   className="text-gray-600"
                   sx={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
                 >
-                  Hoạt động tại chuỗi bể bơi hàng đầu Hà Nội, đảm bảo an toàn
-                  sức khỏe của học viên với: Hệ thống bể bơi bốn mùa. Chất lượng
-                  đạt chuẩn Bộ Y Tế. Nhiệt độ từ 30-31 độ C vào mùa đông và mát
-                  vào mùa hè. Các tiện ích chuyên nghiệp.
+                  CLB Bơi Lặn Thủ Đô là một môi trường học tập và rèn luyện
+                  chuyên nghiệp dành cho trẻ em và thanh thiếu niên yêu thích bộ
+                  môn bơi lội. Với định hướng “ Tâm - TríThể- Lực”, CLB không
+                  chỉ dạy bơi an toàn mà còn chú trọng phát triển thể lực, tinh
+                  thần kỷ luật và sự tự tin cho mỗi học viên. Hoạt động tại
+                  chuỗi bể bơi hàng đầu Hà Nội, đảm bảo an toàn sức khỏe của học
+                  viên với: Hệ thống bể bơi bốn mùa. Chất lượng đạt chuẩn Bộ Y
+                  Tế. Nhiệt độ từ 30-31 độ C vào mùa đông và mát vào mùa hè. Các
+                  tiện ích chuyên nghiệp. CLB có đội ngũ huấn luyện viên có
+                  chuyên môn cao, giàu kinh nghiệm là vận động viên bơi, các cử
+                  nhân sư phạm thể dục thể thao luôn đồng hành sát sao cùng từng
+                  học viên
                 </Typography>
 
                 {/* Features list */}
@@ -170,9 +178,9 @@ function About() {
                   variant="contained"
                   size="large"
                   className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 py-3 rounded-md shadow-md"
-                  href="#register"
+                  href="/introduce"
                 >
-                  Đăng ký ngay
+                  Xem thêm
                 </Button>
               </Box>
             </Grid>

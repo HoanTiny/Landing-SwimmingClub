@@ -53,6 +53,11 @@ const RegisterForm: React.FC = () => {
       label: 'Cơ sở 4',
       address: '33 Mạc Thái Tổ, Yên Hòa, Cầu Giấy, Hà Nội',
     },
+    {
+      id: 'cs5',
+      label: 'Cơ sở 5',
+      address: 'Học viện An Ninh 58 Đường 19/5, P. Văn Quán',
+    },
   ];
 
   const handleChange = (
@@ -119,14 +124,42 @@ const RegisterForm: React.FC = () => {
       <Section>
         <Card className="w-full max-w-4xl bg-white bg-opacity-90 rounded-lg shadow-lg">
           <CardContent>
-            <Typography
-              variant="h4"
-              align="center"
-              gutterBottom
-              className="text-blue-800 font-bold"
-            >
-              Đăng ký nhận ngay ưu đãi!
-            </Typography>
+            <Box className="mb-6 text-center">
+              <Typography
+                variant="h3"
+                component="h1"
+                className="text-blue-900 font-bold"
+                sx={{
+                  letterSpacing: 1,
+                  mb: 1,
+                  fontSize: { xs: '2rem', md: '2.5rem' },
+                  lineHeight: 1.2,
+                }}
+              >
+                5 Cơ Sở Trải Rộng Khắp Hà Nội
+              </Typography>
+              <Typography
+                variant="h6"
+                className="text-blue-700 font-semibold"
+                sx={{
+                  fontSize: { xs: '1.1rem', md: '1.3rem' },
+                  mb: 0.5,
+                }}
+              >
+                Đăng ký nhận ngay ưu đãi!
+              </Typography>
+              <Box
+                sx={{
+                  width: 60,
+                  height: 4,
+                  background:
+                    'linear-gradient(90deg, #1976d2 60%, #42a5f5 100%)',
+                  borderRadius: 2,
+                  mx: 'auto',
+                  mt: 1,
+                }}
+              />
+            </Box>
 
             <Box
               component="form"

@@ -24,61 +24,52 @@ export default function Footer() {
           {/* Cột 2: Quick Link (có hiệu ứng hover) */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Liên kết nhanh
+              Hệ thống các cơ sở
             </Typography>
             <ul className="list-none space-y-2 !text-white">
               <li>
                 <Link
-                  href="#home"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  href="#location1"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Trang chủ
+                  Cơ sở 1: 234 Hoàng Quốc Việt, Cầu Giấy, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#services"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  href="#location2"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Dịch vụ
+                  Cơ sở 2: 109 Nguyễn Tuân, Thanh Xuân, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#classes"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  href="#location3"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Lớp học
+                  Cơ sở 3: 83 Vũ Trọng Phụng, Thanh Xuân, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#register"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  href="#location4"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Đăng ký
+                  Cơ sở 4: 33 Mạc Thái Tổ, Yên Hòa, Cầu Giấy, Hà Nội
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#trainers"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  href="#location5"
+                  className="!text-gray-300 hover:text-blue-400 transition-colors"
                   underline="none"
                 >
-                  Đội ngũ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#about"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                  underline="none"
-                >
-                  Về chúng tôi
+                  Cơ sở 5: Học viện An Ninh 58 Đường 19/5, P. Văn Quán
                 </Link>
               </li>
             </ul>
@@ -87,52 +78,37 @@ export default function Footer() {
           {/* Cột 3: Popular Services (có hiệu ứng hover) */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" className="font-semibold mb-3">
-              Dịch vụ phổ biến
+              Về chúng tôi
             </Typography>
             <ul className="list-none space-y-2 !text-white">
               <li>
                 <Link
-                  href="#personal-training"
+                  href="/introduce"
                   className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
+                  target="_blank"
                 >
-                  Huấn luyện cá nhân
+                  Giới thiệu câu lạc bộ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#group-classes"
+                  href="/curriculum"
                   className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
+                  target="_blank"
                 >
-                  Lớp học nhóm
+                  Chương trình học
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#kids-swimming"
+                  href="/schedule"
                   className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
                   underline="none"
+                  target="_blank"
                 >
-                  Bơi lội cho trẻ em
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#adult-swimming"
-                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
-                  underline="none"
-                >
-                  Bơi lội cho người lớn
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#advanced-training"
-                  className="!text-gray-300 hover:text-blue-400 transition-colors link-hover"
-                  underline="none"
-                >
-                  Đào tạo nâng cao
+                  Lịch hoạt động
                 </Link>
               </li>
             </ul>
@@ -145,7 +121,7 @@ export default function Footer() {
             </Typography>
             <Box className="flex items-start space-x-2 mb-2">
               <LocationOn fontSize="small" className="text-blue-400 mt-1" />
-              <Typography variant="body2" className="text-gray-300">
+              <Typography variant="body2" className="!text-gray-300">
                 33 Mạc Thái Tổ, Yên Hòa, Cầu Giấy, Hà Nội
               </Typography>
             </Box>
@@ -153,7 +129,7 @@ export default function Footer() {
               <Phone fontSize="small" className="text-blue-400" />
               <Link
                 href="tel:+84968156663"
-                className="text-gray-300 hover:text-blue-400 transition-colors"
+                className="!text-gray-300 hover:text-blue-400 transition-colors"
                 underline="none"
               >
                 +84 968 156 663

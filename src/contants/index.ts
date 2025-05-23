@@ -65,7 +65,7 @@ export const navItems = [
     isRoute: false,
   },
   {
-    label: 'Đăng ký',
+    label: 'Cơ sở',
     href: '#register',
     id: 'register',
     icon: AppRegistrationIcon,
